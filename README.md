@@ -6,11 +6,11 @@ application up and running.
 Things you may want to cover:
 
 - Rails version
-  6.1.4.6
+  <!-- 6.1.4.6 -->
 - Ruby version
-  ruby 3.0.3p157
+  <!-- ruby 3.0.3p157 -->
 - System dependencies
-  bootsnap (>= 1.4.4)
+  <!-- bootsnap (>= 1.4.4)
   bootstrap-sass (~> 3.4, >= 3.4.1)
   byebug
   capybara (>= 3.26)
@@ -27,10 +27,10 @@ Things you may want to cover:
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
-  webpacker (~> 5.0)
+  webpacker (~> 5.0) -->
 
 - Bundled with
-  2.3.9
+  <!-- 2.3.9 -->
 - Deployment instructions
 
 - ...
