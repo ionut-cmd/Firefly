@@ -12,27 +12,27 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script> -->
     <script>
-      function myFunction() {
-          var x, text;
-
-          // 获取 id="numb" 的值
-          x = document.getElementById("numb").value;
-
-          // 如果输入的值 x 不是数字或者小于 1 或者大于 10，则提示错误 Not a Number or less than one or greater than 10
-          if (isNaN(x) || x < 1 || x > 10) {
-              text = "输入错误";
-          } else {
-              text = "输入正确";
-          }
-          document.getElementById("demo").innerHTML = text;
-        }
+      // function myFunction() {
+      //     var x, text;
+      //
+      //     // 获取 id="numb" 的值
+      //     x = document.getElementById("numb").value;
+      //
+      //     // 如果输入的值 x 不是数字或者小于 1 或者大于 10，则提示错误 Not a Number or less than one or greater than 10
+      //     if (isNaN(x) || x < 1 || x > 10) {
+      //         text = "输入错误";
+      //     } else {
+      //         text = "输入正确";
+      //     }
+      //     document.getElementById("demo").innerHTML = text;
+      //   }
    </script>
 
 
   </head>
 
   <body>
-      <h1>JavaScript 验证输入</h1>
+      <!-- <h1>JavaScript 验证输入</h1>
 
     <p>请输入 1 到 10 之间的数字：</p>
 
@@ -40,7 +40,7 @@
 
     <button type="button" onclick="myFunction()">提交</button>
 
-    <p id="demo"></p>
+    <p id="demo"></p> -->
 
 
     <%= render('shared/navbar') %>
