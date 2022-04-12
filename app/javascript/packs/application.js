@@ -14,6 +14,19 @@ import "stylesheets/application"
 
 
 
+
+
+// document.addEventListener("click",function(){
+//   document.getElementById("myBtn").addEventListener("click",function(){
+//     document.getElementById("demo").innerHTML="hello World"
+//   });
+// });
+
+
+
+
+
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

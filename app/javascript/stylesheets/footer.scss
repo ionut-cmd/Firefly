@@ -1,0 +1,22 @@
+.contentimg img{
+     width: 235px;
+     height: 100px;
+}
+ .contentimg .img_content{
+    position: relative;
+    padding: 0;
+    width: 235px;
+    height: 100px;
+}
+ .contentimg .img_content .mask{
+    position: absolute;
+    top:-36px;
+    left: 0;
+    width: 235px;
+    height: 100px;
+    background: rgba(113, 198, 32, 0.9);
+    color:#fff;
+    line-height: 100px;
+    text-align: center;
+    display: none;
+}
