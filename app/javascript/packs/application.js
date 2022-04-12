@@ -12,16 +12,18 @@ import "bootstrap/dist/js/bootstrap"
 import "bootstrap/dist/css/bootstrap"
 import "stylesheets/application"
 
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
 
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
-require("jquery")
+
+
+
+// document.addEventListener("click",function(){
+//   document.getElementById("myBtn").addEventListener("click",function(){
+//     document.getElementById("demo").innerHTML="hello World"
+//   });
+// });
+
+
+
 
 
 
