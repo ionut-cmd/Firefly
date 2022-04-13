@@ -31,7 +31,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 #added gems
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
-
+gem 'devise'
+gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
