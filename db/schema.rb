@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_13_213226) do
+ActiveRecord::Schema.define(version: 2022_04_13_235314) do
 
   create_table "forums", force: :cascade do |t|
     t.string "title", null: false
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2022_04_13_213226) do
     t.string "imageurl"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "category", null: false
   end
 
 end
