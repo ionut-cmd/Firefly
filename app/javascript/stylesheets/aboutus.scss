@@ -1,0 +1,59 @@
+
+.wrapper {
+  display: grid;
+  border-style: solid;
+  border-color: yellow;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.photos-1{
+  background-color: black;
+}
+.photos-2{
+  background-color: #ED2207;
+}
+.photos-3{
+  background-color: #07ED0E;
+}
+.photos-4{
+  background-color: black;
+}
+.photos-5{
+  background-color: #07EDDA;
+}
+.photos-6{
+  background-color: brown;
+}
+.photos-7{
+  background-color: brown;
+}
+.photos-8{
+  background-color: yellow;
+}
+
+ h2{
+  text-align: center;
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+/* We create a pseudo element and blur it using the SVG filter. We’ll grab the content from the custom HTML attribute. */
+
+h2:before {
+  left: 0;
+  top: 0;
+  content: attr(filter-content);
+
+  filter: url(#motion-blur-filter);
+}
+
+/* We hide the SVG filter element from the DOM as it would take up some space */
