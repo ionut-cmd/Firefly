@@ -17,13 +17,17 @@
   </div>
 
   <div class="field">
+    <%= form.label :category %>
+    <%= form.select(:category, options_for_select([['Violent Crime', 'Volient Crime'], ['Hate Crime', 'Hate Crime'],['Sexual Assault', 'Sexual Assault ']]))  %>
+  </div>
+
+  <div class="field">
     <%= form.label :content %>
     <%= form.text_area :content %>
   </div>
 
-  <div class="field">
-    <%= form.label :imageurl %>
-    <%= form.text_field :imageurl %>
+  <div class="hidden_field">
+    <%= form.hidden_field :imageurl, value:"assets/BannerPics/img"+(rand(1-54)).to_s+".jpg" %>
   </div>
 
   <div class="actions">

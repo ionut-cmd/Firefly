@@ -33,6 +33,7 @@ gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
 gem 'devise'
 gem 'simple_form'
+gem 'font-awesome-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,4 +1,5 @@
 class ForumsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_forum, only: %i[ show edit update destroy ]
 
   # GET /forums or /forums.json
@@ -12,7 +13,7 @@ class ForumsController < ApplicationController
 
   # GET /forums/new
   def new
-    @forum = current_user.posts.build 
+    @forum = current_user.forums.build 
     #@forum = Forum.new
   end
 
@@ -23,7 +24,7 @@ class ForumsController < ApplicationController
   # POST /forums or /forums.json
   def create
     #@forum = Forum.new(forum_params)
-    @forum = current_user.posts.build(forum_params)
+    @forum = current_user.forums.build(forum_params)
     respond_to do |format|
       if @forum.save
         format.html { redirect_to forum_url(@forum), notice: "Forum was successfully created." }
@@ -66,6 +67,6 @@ class ForumsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def forum_params
-      params.require(:forum).permit(:title, :content, :imageurl)
+      params.require(:forum).permit(:title, :content, :imageurl, :category)
     end
 end

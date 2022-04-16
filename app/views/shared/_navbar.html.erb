@@ -54,11 +54,27 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link disabled"><font color='yellow'size='4'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Forum </font></a>
+          <a class="nav-link" href="/forums"><font color='yellow'size='4'>Forum&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></a>
         </li>
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Signout", destroy_user_session_path, method: "delete" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Signin", new_user_session_path %>
+          </li>
+        <% end %>
+        
       </ul>
       <form class="d-flex">
         <button class="btn btn-outline-success" type="submit" style="color:yellow">Login </button>
+        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button> -->
+      </form>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <form class="d-flex">
+        <button class="btn btn-outline-success" type="submit" style="color:yellow">Sign-out </button>
         <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button> -->
       </form>
