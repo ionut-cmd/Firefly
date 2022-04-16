@@ -4,6 +4,15 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :firstname,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "firstname" }%>
+    <%= f.input :lastname,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "lastname" }%>
+    <%= f.hidden_field :thumbnail, value:"thumb/"+(rand(1-12)).to_s+".png" %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,

@@ -16,8 +16,8 @@
 <div class="blog-container">
   
   <div class="blog-header">
-    <div class="blog-cover" style="background-image: url(<%= @forum.imageurl %>)">
-      <div class="blog-author">
+    <div class="blog-cover" style="background-image: url(<%=asset_path @forum.imageurl %>)">
+      <div class="blog-author" style="background-image: url(<%=asset_path @forum.user.thumbnail%>)">
         <h3><%= @forum.user.email %></h3>
       </div>
     </div>

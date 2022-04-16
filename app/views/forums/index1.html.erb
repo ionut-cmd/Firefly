@@ -1,37 +1,43 @@
-<p id="notice"><%= notice %></p>
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<div class="fond"> <span class="s1">blog </span><span class="s2">card</span></div>
-<div class="card">
-    <div class="thumbnail"><img class="left" src="<%= forum.imageurl %>" /></div>
-    <div class="right">
-        <h1><%= @forum.title %></h1>
-        <div class="author"><img src="https://randomuser.me/api/portraits/men/95.jpg" />
-            <h2><%= forum.user.email %></h2>
-        </div>
-        <div class="separator"></div>
-        <p><%= forum.content %></p>
-    </div>
-    <h6><%= time_ago_in_words(forum.created_at) %></h6>
-    <ul>
-        <li><i class="fa fa-eye fa-2x"></i></li>
-        <li><i class="fa fa-heart-o fa-2x"></i></li>
-        <li><i class="fa fa-envelope-o fa-2x"></i></li>
-        <li><i class="fa fa-share-alt fa-2x"></i></li>
-    </ul>
-    <div class="fab"><i class="fa fa-arrow-down fa-3x"> </i></div>
-</div>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email, required: true, autofocus: true %>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+    <% end %>
+    <%= f.input :firstname,
+                hint: "leave it blank if you don't want to change it",
+                required: false,
+                input_html: { autocomplete: "first name" } %>
+    <%= f.input :lastname,
+                hint: "leave it blank if you don't want to change it",
+                required: false,
+                input_html: { autocomplete: "last name" } %>
+    <%= f.input :password,
+                hint: "leave it blank if you don't want to change it",
+                required: false,
+                input_html: { autocomplete: "new-password" } %>
+    <%= f.input :password_confirmation,
+                required: false,
+                input_html: { autocomplete: "new-password" } %>
+    <%= f.input :current_password,
+                hint: "we need your current password to confirm your changes",
+                required: true,
+                input_html: { autocomplete: "current-password" } %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Update" %>
+  </div>
 
 
- <tr>
-    <td><%= link_to forum.title, forum %></td>
-    <td><%= forum.category %></td>
-    <td><%= forum.content %></td>
-    <td><%= forum.imageurl %></td>
-    <td><%= time_ago_in_words(forum.created_at) %></td>
-    <td><%= forum.user.email %></td>
-    <td><%= link_to 'Show', forum %></td>
-    <td><%= link_to 'Edit', edit_forum_path(forum) %></td>
-    <td><%= link_to 'Destroy', forum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<%= link_to "Back", :back %>
 <% end %>
-

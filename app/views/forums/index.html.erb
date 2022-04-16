@@ -5,7 +5,7 @@
   <div class="blog-card">
     <div class="meta">
 
-      <div class="photo" style="background-image: url(<%= forum.imageurl %>)"></div>
+      <div class="photo" style="background-image: url(<%= "assets/"+forum.imageurl %>)"></div>
       <ul class="details">
         <li class="author"><a><%= forum.user.email %></a></li>
         <li class="date"><%= time_ago_in_words(forum.created_at) %></li>
