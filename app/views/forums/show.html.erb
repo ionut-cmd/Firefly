@@ -43,8 +43,20 @@
       <li><a>Comments</a></li>
     </ul>
   </div>
+    <% @forum.comments.each do |comment| %>
+        <ul>
+          <li><a><%=comment.user.email%></a></li>
+          <li><a><%=comment.comment%></a></li>
+          <li><a><%=comment.created_at%></a></li>
+        </ul>
+    <% end %>
 
+    <h3>Reply to thread
+      <%= render "comments/form" %>
+    </h3>
 </div>
-
+<h2>
+  <%= @forum.comments.count %>
+</h2>
 <%= link_to 'Edit', edit_forum_path(@forum) %> |
 <%= link_to 'Back', forums_path %>
