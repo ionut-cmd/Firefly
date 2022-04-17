@@ -55,12 +55,22 @@
 // .form_login{
 //   background-color: black;
 // }
-label{
 
-   vertical-align: middle;
-   display: inline-block;
 
+//  login page css - error: adjust the label aligning
+.input-item{
+
+
+   display: flex;
+   // width: 100px;
+    text-align: right;
 }
+
+// .user_email, .user_password{
+//    display: flex;
+//   // width: 100px;
+//    text-align: right;
+// }
 
 *{
   padding: 0;
@@ -135,13 +145,16 @@ body{
   left: 0px;
 
 }
-label{
-  display: inline-block;
-  width: 100px;
-  text-align: right;
-}
 .input-item{
   width: 400px;
   display: inline-block;
   margin: 5px 0;
 }
+
+.form-info{
+  position: relative;
+  right: 66px;
+}
+
+
+//passwords_new page
