@@ -18,7 +18,7 @@
     </div>
     <div class="description">
       <h1><%= link_to forum.title, forum %></h1>
-      <p><%= forum.content[0,50] %></p>
+      <p><%= forum.content[0,100] + "...." %></p>
       <br>
       <p class="read-more">
         <%= link_to "Read More", forum %>

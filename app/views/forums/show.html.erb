@@ -17,8 +17,8 @@
   
   <div class="blog-header">
     <div class="blog-cover" style="background-image: url(<%=asset_path @forum.imageurl %>)">
-      <div class="blog-author" style="background-image: url(<%=asset_path @forum.user.thumbnail%>)">
-        <h3><%= @forum.user.email %></h3>
+      <div class="blog-author">
+        <h3><img src=<%=asset_path @forum.user.thumbnail%> width=60 height =60 border-radius = 50 %> <%=@forum.user.email%></h3>
       </div>
     </div>
   </div>
@@ -39,15 +39,20 @@
   </div>
   
   <div class="blog-footer">
+
     <ul>
       <li><a>Comments</a></li>
     </ul>
   </div>
     <% @forum.comments.each do |comment| %>
-        <ul>
-          <li><a><%=comment.user.email%></a></li>
+        <ul style="list-style-type:none;">
+          <li><img src=<%=asset_path comment.user.thumbnail%> width=40 height =40 > <%=comment.user.email%></li>
           <li><a><%=comment.comment%></a></li>
           <li><a><%=time_ago_in_words(comment.created_at)+ " ago"%></a></li>
+          <% if comment.user == current_user or @forum.user == current_user %>
+            <li> <%= link_to "Delete Reply", [comment.forum, comment], method: :delete, data: { confirm: "Are you sure?" } %>
+          <%end%>
+          </li>
         </ul>
     <% end %>
 
@@ -55,8 +60,6 @@
       <%= render "comments/form" %>
     </h3>
 </div>
-<h2>
-  <%= @forum.comments.count %>
-</h2>
+
 <%= link_to 'Edit', edit_forum_path(@forum) %> |
 <%= link_to 'Back', forums_path %>

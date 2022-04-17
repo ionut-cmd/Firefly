@@ -28,11 +28,9 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to comment_url(@comment), notice: "Comment was successfully created." }
-        format.json { render :show, status: :created, location: @comment }
+        format.html { redirect_to forum_path(@forum), notice: "Comment was successfully created." }
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
+        format.html { redirect_to forum_path(@forum), notice: "Comment was not successfully created." }
       end
     end
   end
@@ -55,7 +53,7 @@ class CommentsController < ApplicationController
     @comment = @forum.comments.find(params[:id])
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to comments_url, notice: "Comment was successfully destroyed." }
+      format.html { redirect_to forum_path(@forum), notice: "Comment was successfully destroyed." }
       format.json { head :no_content }
     end
   end
