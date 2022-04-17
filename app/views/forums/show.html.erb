@@ -47,7 +47,7 @@
         <ul>
           <li><a><%=comment.user.email%></a></li>
           <li><a><%=comment.comment%></a></li>
-          <li><a><%=comment.created_at%></a></li>
+          <li><a><%=time_ago_in_words(comment.created_at)+ " ago"%></a></li>
         </ul>
     <% end %>
 
