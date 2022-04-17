@@ -1,18 +1,4 @@
-<!-- header and footer should be in every pages  -->
-
-<!-- <div class="collapse" id="navbarToggleExternalContent">
-  <div class="bg-dark p-4">
-    <h5 class="text-white h4">Collapsed content</h5>
-    <span class="text-muted">Toggleable via the navbar brand.</span>
-  </div>
-</div>
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</nav> -->
+<!--  -->
 
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
   <div class="container-fluid">
@@ -20,7 +6,7 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
 
-      <img src="assets/logo.jpg" alt="" width="80" height="80" class="d-inline-block align-text-top">
+      <img src="/assets/logo.jpg" alt="Rails" width="80" height="80" class="d-inline-block align-text-top"/>
       <!-- <a href="navbar-logo">Firefly</a> -->
 
     </a>
@@ -54,15 +40,38 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link disabled"><font color='yellow'size='4'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Forum </font></a>
+          <a class="nav-link" href="/forums"><font color='yellow'size='4'>Forum&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></a>
         </li>
+
+
       </ul>
-      <form class="d-flex">
-        <button class="btn btn-outline-success" type="submit" style="color:yellow">Login </button>
-        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button> -->
-      </form>
-      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+     <form class="d-flex">
+       <button class="btn btn-outline-success" type="submit" >
+         <% if user_signed_in? %>
+          <li class="nav-item" >
+            <%= link_to "Signout", destroy_user_session_path, method: "delete" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "profile", edit_user_registration_path %>
+          </li>
+        <% else %>
+          <li class="" style="color:yellow">
+            <%= link_to "Signin", new_user_session_path  %>
+          </li>
+        <% end %>
+      </button>
+
+     </form>
+
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+     <form class="d-flex">
+       <button class="btn btn-outline-success" type="submit" style="color:yellow">Sign-out </button>
+       <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+       <button class="btn btn-outline-success" type="submit">Search</button> -->
+     </form>
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+
     </div>
   </div>
 </nav>
