@@ -24,6 +24,7 @@ body, button, input {
   flex: 0 1 700px;
   margin: auto;
   padding: 10px;
+  
 }
 
 .screen {
@@ -135,6 +136,16 @@ body, button, input {
   bottom: -15px;
 }
 
+.app-personal {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #FFF01F;
+  font-size: 20px;
+  bottom: 10px;
+}
 
 .app-contact {
   margin-top: auto;

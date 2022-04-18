@@ -1,66 +1,32 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
 
-    <style media="screen">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-    </style>
-
-
-  </head>
-  <body>
-
-
-        <div class="form-inputs">
-          <div class="login-wrapper">
-            <div class="header">login</div>
-            <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
-            <div class="form-wrapper">
-              <div class="form-info">
-                <div class="input-item">
-                  <%= f.input :email,
-                              required: false,
-                              autofocus: true,
-                              input_html: { autocomplete: "email" } %>
-                </div>
-                <div class="input-item">
-                  <%= f.input :password,
-                              required: false,
-                              input_html: { autocomplete: "current-password" } %>
-                </div>
-              </div>
-
-                  <div class="input-rem">
-                      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-                  </div>
-
-                  <div  class="btn">
-                      <%= f.button :submit, "Log in" %>
-                        <% end %>
-                  </div>
-
-                  <%= render "users/shared/links" %>
-            </div>
-
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span>LOGIN</span>
           </div>
-
-
-
         </div>
+        <div class="screen-body-item">
+          <div class="app-form">
+            <div class="app-form-group">
+             <%= f.label :email,class: "app-subhead"  %><br /><%= f.email_field :email,class: "form-control",placeholder: "Email", autofocus: true, autocomplete: "email" %>
+            </div>
+            <div class="app-form-group">
+              <%= f.label :password,class: "app-subhead"  %><br /><%= f.password_field :password,class: "form-control",placeholder: "Password", autofocus: true, autocomplete: "new-password" %>
+            </div>
+            <button  class="app-form-button" ><div class="actions"><%= f.submit "LOGIN", class:"app-form-button" %></div></button>
+            <% end %>
+            <button class="app-form-button"><%= button_to "SIGN-UP", new_user_session_path, method: :get, class:"app-form-button"%></button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+      <%= render "users/shared/links" %>
 
-
-
-
-
-
-
-
-
-
-
-  </body>
-</html>
