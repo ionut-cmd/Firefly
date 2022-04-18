@@ -32,3 +32,8 @@ import "stylesheets/application"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+require("trix")
+require("@rails/actiontext")
+import "../trix-editor-overrides"
+import "@fortawesome/fontawesome-free/css/all"

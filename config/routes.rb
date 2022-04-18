@@ -5,7 +5,12 @@ Rails.application.routes.draw do
     resources :comments
   end
   root 'home#home', as: 'homepage_index'
-  get 'forum' , to:  'forums#index'
   get 'aboutus_new', to: 'home#aboutus_new'
+  get 'forum' , to:  'forums#index'
+# <<<<<<< HEAD
+#   get 'aboutus_new', to: 'home#aboutus_new'
+# =======
+  get 'profile', to: 'devise#edit'
+# >>>>>>> 26bf5b11cdc2a39423c5df7643670d3137dec216
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

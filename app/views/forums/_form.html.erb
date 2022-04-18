@@ -10,27 +10,34 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-body">
+        <div class="screen-body-item">
+          <div class="app-title">
+          <span>Create New Forum</span>
+        </div>
+        <br>
+          <div class="app-form">
+            <div class="app-form-group">
+              <%=form.label :title ,class: "app-subhead" %><br /><%= form.text_field :title,class: "form-control",placeholder: "Title", autofocus: true %>
+            </div>
+            <div class="app-form-group">
+              <%=form.label :category ,class: "app-subhead" %><br /><%= form.select(:category, options_for_select([['Violent Crime', 'Volient Crime'], ['Hate Crime', 'Hate Crime'],['Sexual Assault', 'Sexual Assault ']]),{},{class: "form-control"})%>
+            </div>
+            <div class="app-form-group">
+              <%= form.label :content,class: "app-subhead"  %><br /><%= form.rich_text_area :richcontent,class: "form-control"%>
+            </div>
+            <div class="hidden_field">
+              <%= form.hidden_field :imageurl, value:"BannerPics/img"+(rand(1-54)).to_s+".jpg" %>
+            </div>
+            <button class="app-form-button" ><div class="actions"><%= form.submit "Create Forum", class:"app-form-button" %></div></button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.select(:category, options_for_select([['Violent Crime', 'Volient Crime'], ['Hate Crime', 'Hate Crime'],['Sexual Assault', 'Sexual Assault ']]))  %>
-  </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="hidden_field">
-    <%= form.hidden_field :imageurl, value:"BannerPics/img"+(rand(1-54)).to_s+".jpg" %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
 <% end %>
+

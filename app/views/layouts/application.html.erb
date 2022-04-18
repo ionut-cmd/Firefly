@@ -6,26 +6,20 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= javascript_pack_tag 'hello_react' %>
+    <%= javascript_pack_tag 'header1' %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script> -->
-    <script>
-
-   </script>
-
-
   </head>
 
   <body>
 
     <!-- <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p> -->
-    <%= render('shared/navbar') %>
+    <%= render('shared/navbar1') %>
     <%= yield %>
-
     <%= render('shared/footer') %>
     <!-- <button  id="myBtn">click</button>
     <p id="demo">11</p> -->

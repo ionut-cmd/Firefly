@@ -1,3 +1,6 @@
+*{
+  color: #000000;
+}
 body {
   background: #e5ded8;
   box-sizing: border-box;
@@ -6,9 +9,10 @@ body {
 // Blog container
 //-------------------------
 .blog-container {
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: hsla(0, 0, 0, .2) 0 4px 2px -2px;
+  background: transparent;
+  border-radius: 10px;
+  border-color: #3e3e3e;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   font-family: "adelle-sans", sans-serif;
   font-weight: 100;
   margin: 48px auto;
@@ -69,6 +73,7 @@ body {
 .blog-body {
   margin: 0 auto;
   width: 80%;
+
 }
 .video-body {
   height: 100%;
