@@ -1,0 +1,38 @@
+<nav class = "navbar navbar-expand-lg navbar navbar-dark bg-dark">
+<nav>
+    <div class="logo">
+        <%=image_tag("newnewlogo.png")%>
+    </div>
+    <div class="hamburger1">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <ul1 class="nav-links1">
+        <li1><a1 href="#">Home</a1></li1>
+        <li1><a1 href="#">Solutions</a1></li1>
+        <li1><a1 href="#">Products</a1></li1>
+        <li1><a1 href="#">Services</a1></li1>
+        <li1><a1 href="#">Contact Us</a1></li1>
+        <li1><button class="join-button" href="#">Login</button></li1>
+        <li1><button class="join-button" href="#">Account</button></li1>
+    </ul1>
+</nav>
+</nav>
+<script>
+    const hamburger1 = document.querySelector(".hamburger1");
+    const navLinks1 = document.querySelector(".nav-links1");
+    const links1 = document.querySelectorAll(".nav-links1 li1");
+
+    hamburger1.addEventListener('click', ()=>{
+       //Animate Links
+        navLinks1.classList.toggle("open");
+        links1.forEach(link => {
+            link1.classList.toggle("fade");
+        });
+
+        //Hamburger Animation
+        hamburger1.classList.toggle("toggle");
+    });
+</script>
+</head>
