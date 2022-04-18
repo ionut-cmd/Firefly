@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   root 'home#home', as: 'homepage_index'
   get 'aboutus', to: 'home#aboutus'
   get 'forum' , to:  'forums#index'
+  get 'profile', to: 'devise#edit'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

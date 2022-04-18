@@ -9,9 +9,11 @@ body {
   margin: 2rem;
 }
 
+
 $color_white: #fff;
 $color_prime: #5ad67d;
 $color_grey: #e2e2e2;
+$color-head: #3e3e3e;
 $color_grey_dark: #a2a2a2;
 
 .blog-card {
@@ -27,7 +29,7 @@ $color_grey_dark: #a2a2a2;
   overflow: hidden;
   z-index: 0;
   a {
-    color: #000000;
+    color: #f1f1f1;
     &:hover {
       color: $color_prime;
     }
@@ -104,7 +106,7 @@ $color_grey_dark: #a2a2a2;
   }
   .description {
     padding: 1rem;
-    background: $color_white;
+    background: $color-head;
     position: relative;
     z-index: 1;
     h1,
@@ -147,7 +149,7 @@ $color_grey_dark: #a2a2a2;
   }
   p {
     position: relative;
-    color: #000000;
+    color: #f1f1f1;;
     margin: 1rem 0 0;
     &:first-of-type {
       margin-top: 1.25rem;
@@ -181,7 +183,7 @@ $color_grey_dark: #a2a2a2;
       &:before {
         transform: skewX(-3deg);
         content: "";
-        background: #fff;
+        background: $color-head;
         width: 30px;
         position: absolute;
         left: -10px;
