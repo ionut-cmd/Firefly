@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   end
   root 'home#home', as: 'homepage_index'
   get 'forum' , to:  'forums#index'
+  get 'aboutus_new', to: 'home#aboutus_new'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
