@@ -22,18 +22,26 @@
 
       <div class="photo" style="background-image: url(<%= "assets/"+forum.imageurl %>)"></div>
       <ul class="details">
-        <li class="author"><a><%= forum.user.email %></a></li>
-        <li class="date"><%= time_ago_in_words(forum.created_at) %></li>
         <li class="tags">
           <ul>
-            <li><a><%= forum.category%></a></li>
+            <li><a><%= forum.user.email %></a></li>
+          </ul>
+        </li>
+        <li class="tags">
+          <ul>
+          <li><a><%= forum.category%></a></li>
+          </ul>
+        </li>
+        <li class="tags">
+          <ul>
+            <li><a><%= time_ago_in_words(forum.created_at) %></a></li>
           </ul>
         </li>
       </ul>
     </div>
     <div class="description">
       <h1><%= link_to forum.title, forum %></h1>
-      <p><%= forum.content[0,100] + "...." %></p>
+      <p><%= truncate(strip_tags(forum.richcontent.to_s), length: 100)%></p>
       <br>
       <p class="read-more">
         <%= link_to "Read More", forum %>

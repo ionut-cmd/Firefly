@@ -2,11 +2,13 @@
 
 * {
   box-sizing: border-box;
+  color: #f1f1f1;
 }
 
 body {
   background: #f1f1f1;
   margin: 2rem;
+
 }
 
 
@@ -73,9 +75,10 @@ $color_grey_dark: #a2a2a2;
     width: 100%;
     font-size: .9rem;
     a {
-      text-decoration: dotted underline
+      text-decoration: dotted underline;
     }
     ul li {
+      color: #f1f1f1;
       display: inline-block;
     }
     .author:before {
@@ -96,10 +99,12 @@ $color_grey_dark: #a2a2a2;
         margin-right: 10px;
       }
       li {
+        color: #f1f1f1;
         margin-right: 10px;
         &:first-child {
           margin-left: 0px;
         }
+        
       }
     }
   }
@@ -128,6 +133,7 @@ $color_grey_dark: #a2a2a2;
       text-align: right;
       a {
         color: $color_prime;
+        text-decoration: none;
         display: inline-block;
         position: relative;
         &:after {
