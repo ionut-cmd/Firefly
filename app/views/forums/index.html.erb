@@ -41,7 +41,7 @@
     </div>
     <div class="description">
       <h1><%= link_to forum.title, forum %></h1>
-      <p><%= truncate(strip_tags(forum.richcontent.to_s), length: 100)%></p>
+      <p><%= truncate(strip_tags(forum.richcontent.to_s), length: 80)%></p>
       <br>
       <p class="read-more">
         <%= link_to "Read More", forum %>
