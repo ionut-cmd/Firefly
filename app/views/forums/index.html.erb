@@ -15,7 +15,7 @@
     <use xlink:href="#s-text" class="text-copy"></use>
   </g>
 </svg>
-<a class="Forum_new"><%= link_to 'New Forum', new_forum_path %></a>
+<button class="glow-on-hover" type="button"><%= link_to 'New Forum', new_forum_path %></button>
 <% @forums.each do |forum| %>
   <div class="blog-card">
     <div class="meta">

@@ -4,13 +4,26 @@
     <meta charset="utf-8">
     <title></title>
     <script type="text/javascript">
-      function readMore() {
-       var expandInfo = document.getElementById("more-info-js");
-       var mainHeadings = document.getElementById("main-headings-js");
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
 
-       mainHeadings.style.transform = "scale(0.7)";
-       expandInfo.style.height = "350px";
-     }
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 150;
+
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", reveal);
+
+
+
     </script>
   </head>
   <body>
@@ -22,209 +35,192 @@
 
 
 
-<main class="main main-raised">
-  <div class="slogan">
-    <h1>
-    <span>always be</span>
-    <div class="message">
-      <div class="word1">Firefly</div>
-      <div class="word2">safe</div>
-      <div class="word3">light</div>
+
+  <div class="header_F">
+    <div class="container">
+    <div class="content">
+      <h1>We are Firefly</h1>
+      <p>We are a cluster of firefly, light your way</p>
     </div>
-  </h1>
   </div>
-  <section class="section text-center">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-10">
-          <h2 class="title mb-4" data-aos="fade-up">About Our Work</h2>
-          <section class="senction_2">
-            <div class="container">
-            <div class="container-inner">
-              <div class="main-content">
-                <div class="main-headings" id="main-headings-js">
-                <p id="by-line">We are a cluster of firefly, light your way.</p>
-
-                <div class="heading">
-                  <h3 id="heading1">Firefly</h3>
-                  <h3 id="heading2">Group 6</h3>
-                  <h1 id="heading3">INTRO</h1>
-                </div>
-
-                <div class="short-bio">
-                  <p>Our product will arrive as a Web-based Application with the primary focus on solving youth-
-        related violence and, in particular, crimes concerning sharp instruments. </p>
-
-                </div>
-
-                <a href="#" class="link" onclick="readMore()">Read More</a>
-                </div>
-
-                <div class="more-info " id="more-info-js">
-
-                  <h4>Background</h4>
-
-
-
-                  <p>With this project, we want to make people in their communities feel safer when travelling to or
-        from their place of interest and repel the continuous growing culture of gangs and violent
-        behaviour.</p>
-
-
-                </div>
-
-              </div>
-
-              <div class="image-wrapper">
-              <div class="image-container">
-                <img class="image" src="/assets/firefly.jpeg" alt="image of a cluster of firefly.">
-              </div>
-            </div>
-          </div>
-          </div>
-
-          <div class="container">
-          <div class="container-inner">
-            <div class="main-content">
-              <div class="main-headings" id="main-headings-js">
-              <p id="by-line">We are a cluster of firefly, light your way.</p>
-
-              <div class="heading">
-                <h3 id="heading1">Firefly</h3>
-                <h3 id="heading2">Group6</h3>
-                <h1 id="heading3">OBJ.</h1>
-              </div>
-
-              <div class="short-bio">
-                <p>This project is designed to be a web application, with a data convening integrant centered around multiple external APIs to collect data on the locations where crimes are reported as well as historical data to see the pattern of how heavy the locations are affected.</p>
-
-              </div>
-
-              <a href="#" class="link" onclick="readMore()">Read More</a>
-              </div>
-
-              <div class="more-info " id="more-info-js">
-
-                <h4>Project objective</h4>
-
-                <p>Building a sustainable and real-time safety network through tools such as live chat, web forums, and maps.</p>
-
-                <!-- <p> An implementation of an SOS button will enable the police to
-          obtain the specific location of the user efficiently.</p>
-
-                <p> Hence, increasing the probability of a user
-          rescue in the event of a crime</p> -->
-              </div>
-
-            </div>
-
-            <div class="image-wrapper">
-            <div class="image-container">
-              <img class="image" src="/assets/sos.jpeg" alt="image of a cluster of firefly.">
-            </div>
-          </div>
-          </div>
-          </div>
-
-          <div class="container">
-          <div class="container-inner">
-            <div class="main-content">
-              <div class="main-headings" id="main-headings-js">
-              <p id="by-line">EVALUATION CRITERIA.</p>
-
-              <div class="heading">
-                <h3 id="heading1">Firefly</h3>
-                <h3 id="heading2">Group 6</h3>
-                <h1 id="heading3">Beauty</h1>
-              </div>
-
-              <div class="short-bio">
-                <p>With this project, we want to make people in their communities feel safer when travelling to or from their place of interest and repel the continuous growing culture of gangs and violent behaviour.</p>
-
-
-              </div>
-
-              <a href="#" class="link" onclick="readMore()">Read More</a>
-              </div>
-
-              <div class="more-info " id="more-info-js">
-
-                <h4>Beauty the world</h4>
-
-                <p>  In line with the project's sponsor's time and delivery constraints, the application must be
-          deployed to a production environment using a hosting and development service to allow for an
-          easy evaluation. </p>
-
-                <!-- <p>In order to ensure correct processing of the user data and to avoid mishandling of that data, the
-                integrity and confidentiality principle of the United Kingdom General Data Protection Regulation
-                (UK GDPR) will be closely followed.</p> -->
-
-
-              </div>
-
-            </div>
-
-            <div class="image-wrapper">
-            <div class="image-container">
-              <img class="image" src="/assets/community.jpeg" alt="image of a cluster of firefly.">
-            </div>
-          </div>
-          </div>
-          </div>
-
-          </section>
-
-        </div>
+  <!-- <div id="fullpage">
+      <div class="section">One</div>
+      <div class="section">
+          <div class="slide" data-anchor="slide1">Two 1</div>
+          <div class="slide" data-anchor="slide2">Two 2</div>
       </div>
-    </div>
-  </section>
-  <section class="section text-center">
-    <div class="container">
-      <div class="row justify-content-center">
-      </div>
-    </div>
-  </section>
-  <section class="section text-center">
-    <div class="container">
-      <h2 class="title mb-4" data-aos="fade-up">Development lifecycle...</h2>
-      <div class="card-columns text-white">
-        <div class="card bg-dark" data-aos="fade-right">
+      <div class="section">Three</div>
+      <div class="section">Four</div>
+  </div> -->
+  </div>
 
-          <img class="card-img" src="/assets/about us_firefly" alt="Card image">
-          <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center">
-            <h4 class="card-title">Firefly team</h4>
-            <p class="card-text mt-0">Ionut, Taimoor, Jun, Dingyu, Kez</p>
+
+
+
+    <div class="film">
+      <section>
+        <div class="container reveal fade-bottom">
+          <h2>Our Team</h2>
+          <div class="text-container">
+              <div class="card" style="width: 30rem; ">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+                  <h2 style="color:#ed1a4b" >Ionut</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  <p class="card-text" style="color:#ed1a4b">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+                  <h2 style="color:#ed1a4b" >Taimoor</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  <p class="card-text" style="color:#ed1a4b">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+                  <h2 class="name_middle"  style="color:#ed1a4b">Jun Shi</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  <p class="card-text" style="color:#ed1a4b">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+                  <h2 style="color:yellow" >Dingyu Dong</h2>
+                    <br>
+                    <br>
+                    
+
+                  <p class="card-text" style="color:#ed1a4b">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+                  <h2 style="color:yellow" >Kez</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  <p class="card-text" style="color:#ed1a4b">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+          </div>
+
+      </section>
+
+      <section>
+        <div class="container reveal fade-left">
+          <h2 class="card-text">Our work</h2>
+          <div class="text-container">
+              <div class="card" style="width: 30rem; ">
+                <img src="assets/peaceful.jpg" class="card-img-top" style=" height: 30rem" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+
+                  <h3 class="card-text">Purpose</h3>
+                  <br>
+                  <br>
+                  <p class="card-text">Our product will arrive as a Web-based Application with the primary focus on solving youth-
+related violence and, in particular, crimes concerning sharp instruments. The application will
+provide tools to assist users in identifying high-risk areas on an interactive map, communicating
+and sharing their location with other parties, or asking for help in an emergency.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem; ">
+                <img src="assets/sos.jpeg" class="card-img-top" style=" height: 30rem" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+
+                  <h3 class="card-text">SOS</h3>
+                  <br>
+                  <br>
+                  <p class="card-text">objective is to build a sustainable and real-time safety network through tools such as
+live chat, web forums, and maps. An implementation of an SOS button will enable the police to
+obtain the specific location of the user efficiently. Hence, increasing the probability of a user
+rescue in the event of a crime.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem; ">
+                <img src="assets/social.jpg" class="card-img-top"style=" height: 30rem" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+
+                  <h3 class="card-text">Danger erea</h3>
+                  <br>
+                  <br>
+                  <p class="card-text">Our project will be delivered to help individuals to be acquainted with the increasing knife crime
+in our community. It is evident that people are aware that there is an increase in knife crime in
+our day-to-day lives. They have come to adhere to the fact that such a crime is now common,
+which has caused some to overlook it.</p>
+                </div>
+          </div>
+      </section>
+
+      <section>
+        <div class="container reveal fade-right">
+          <h2>Our work</h2>
+          <div class="text-container">
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" style=" height: 30rem"alt="...">
+                <div class="card-body">
+                  <h3>Purpose</h3>
+                  <p class="card-text">Our product will arrive as a Web-based Application with the primary focus on solving youth-
+related violence and, in particular, crimes concerning sharp instruments. The application will
+provide tools to assist users in identifying high-risk areas on an interactive map, communicating
+and sharing their location with other parties, or asking for help in an emergency.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
           </div>
         </div>
-        <div class="card bg-dark" data-aos="fade-right">
-          <img class="card-img" src="/assets/hope.jpeg" alt="Card image">
-          <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center">
-            <h4 class="card-title">Crime, UK</h4>
-          </div>
-        </div>
-        <div class="card bg-dark" data-aos="fade-right">
-          <img class="card-img" src="/assets/police.jpeg" alt="Card image">
-          <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center">
-            <h4 class="card-title">Police data</h4>
-          </div>
-        </div>
-        <div class="card bg-dark" data-aos="fade-left">
-          <img class="card-img" src="/assets/sos.jpeg" alt="Card image">
-          <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center">
-            <h4 class="card-title">SOS button, United Kingdom</h4>
+      </section>
 
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-</main>
-
-
+</div>
 
 
   </body>
