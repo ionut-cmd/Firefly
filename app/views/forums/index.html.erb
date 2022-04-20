@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+
+<svg viewBox="0 0 960 300", class= "ant">
+  <symbol id="s-text">
+    <text text-anchor="middle" x="50%" y="80%">Forum </text>
+    <text text-anchor="middle" x="52%" y="80%">Forum </text>
+  </symbol>
+
+  <g class = "g-ants">
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+  </g>
+</svg>
+<button class="glow-on-hover" type="button"><%= link_to 'New Forum', new_forum_path %></button>
+<% @forums.each do |forum| %>
+  <div class="blog-card">
+    <div class="meta">
+
+      <div class="photo" style="background-image: url(<%= "assets/"+forum.imageurl %>)"></div>
+      <ul class="details">
+        <li class="tags">
+          <ul>
+            <li><a><%= forum.user.email %></a></li>
+          </ul>
+        </li>
+        <li class="tags">
+          <ul>
+          <li><a><%= forum.category%></a></li>
+          </ul>
+        </li>
+        <li class="tags">
+          <ul>
+            <li><a><%= time_ago_in_words(forum.created_at) %></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1><%= link_to forum.title, forum %></h1>
+      <p><%= truncate(strip_tags(forum.richcontent.to_s), length: 100)%></p>
+      <br>
+      <p class="read-more">
+        <%= link_to "Read More", forum %>
+        <br>
+        <% if forum.user == current_user %>
+          <a><%= link_to 'Delete Post', forum, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+        <% end %>
+
+      </p>
+    </div>
+  </div>
+
+
+<br>
+<% end %>

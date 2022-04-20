@@ -16,6 +16,8 @@ import "stylesheets/application"
 
 
 
+
+
 // document.addEventListener("click",function(){
 //   document.getElementById("myBtn").addEventListener("click",function(){
 //     document.getElementById("demo").innerHTML="hello World"
@@ -30,3 +32,8 @@ import "stylesheets/application"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+require("trix")
+require("@rails/actiontext")
+import "../trix-editor-overrides"
+import "@fortawesome/fontawesome-free/css/all"

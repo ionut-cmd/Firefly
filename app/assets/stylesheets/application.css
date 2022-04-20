@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+@import "./actiontext.scss";
+@import "font-awesome";
+@import "aboutus_new";
+@import "footer";

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 150;
+
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", reveal);
+
+
+
+    </script>
+  </head>
+  <body>
+
+
+
+
+
+
+
+
+
+  <div class="header_F">
+    <div class="container">
+    <div class="content">
+      <h1>We are Firefly</h1>
+      <p>We are a cluster of firefly, light your way</p>
+    </div>
+  </div>
+  <!-- <div id="fullpage">
+      <div class="section">One</div>
+      <div class="section">
+          <div class="slide" data-anchor="slide1">Two 1</div>
+          <div class="slide" data-anchor="slide2">Two 2</div>
+      </div>
+      <div class="section">Three</div>
+      <div class="section">Four</div>
+  </div> -->
+  </div>
+
+
+
+
+    <div class="film">
+      <section>
+        <div class="container reveal fade-bottom">
+          <h2>Our Team</h2>
+          <div class="text-container">
+              <div class="card" style="width: 30rem; ">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+                  <h2 style="color:#ed1a4b" >Ionut</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  <p class="card-text" style="color:#ed1a4b">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+                  <h2 style="color:#ed1a4b" >Taimoor</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  <p class="card-text" style="color:#ed1a4b">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+                  <h2 class="name_middle"  style="color:#ed1a4b">Jun Shi</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  <p class="card-text" style="color:#ed1a4b">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+                  <h2 style="color:yellow" >Dingyu Dong</h2>
+                    <br>
+                    <br>
+                    
+
+                  <p class="card-text" style="color:#ed1a4b">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+                  <h2 style="color:yellow" >Kez</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  <p class="card-text" style="color:#ed1a4b">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+          </div>
+
+      </section>
+
+      <section>
+        <div class="container reveal fade-left">
+          <h2 class="card-text">Our work</h2>
+          <div class="text-container">
+              <div class="card" style="width: 30rem; ">
+                <img src="assets/peaceful.jpg" class="card-img-top" style=" height: 30rem" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+
+                  <h3 class="card-text">Purpose</h3>
+                  <br>
+                  <br>
+                  <p class="card-text">Our product will arrive as a Web-based Application with the primary focus on solving youth-
+related violence and, in particular, crimes concerning sharp instruments. The application will
+provide tools to assist users in identifying high-risk areas on an interactive map, communicating
+and sharing their location with other parties, or asking for help in an emergency.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem; ">
+                <img src="assets/sos.jpeg" class="card-img-top" style=" height: 30rem" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+
+                  <h3 class="card-text">SOS</h3>
+                  <br>
+                  <br>
+                  <p class="card-text">objective is to build a sustainable and real-time safety network through tools such as
+live chat, web forums, and maps. An implementation of an SOS button will enable the police to
+obtain the specific location of the user efficiently. Hence, increasing the probability of a user
+rescue in the event of a crime.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem; ">
+                <img src="assets/social.jpg" class="card-img-top"style=" height: 30rem" alt="...">
+                <div class="card-body" >
+                  <br>
+                  <br>
+
+                  <h3 class="card-text">Danger erea</h3>
+                  <br>
+                  <br>
+                  <p class="card-text">Our project will be delivered to help individuals to be acquainted with the increasing knife crime
+in our community. It is evident that people are aware that there is an increase in knife crime in
+our day-to-day lives. They have come to adhere to the fact that such a crime is now common,
+which has caused some to overlook it.</p>
+                </div>
+          </div>
+      </section>
+
+      <section>
+        <div class="container reveal fade-right">
+          <h2>Our work</h2>
+          <div class="text-container">
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" style=" height: 30rem"alt="...">
+                <div class="card-body">
+                  <h3>Purpose</h3>
+                  <p class="card-text">Our product will arrive as a Web-based Application with the primary focus on solving youth-
+related violence and, in particular, crimes concerning sharp instruments. The application will
+provide tools to assist users in identifying high-risk areas on an interactive map, communicating
+and sharing their location with other parties, or asking for help in an emergency.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 30rem;">
+                <img src="assets/sos.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+</div>
+
+
+  </body>
+</html>

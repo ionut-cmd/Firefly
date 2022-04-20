@@ -1,5 +1,5 @@
+ @import "aboutus";
 
-@import 'ionut';
 .section_fir{
   background-color: #555;
  padding: 100px;
@@ -17,9 +17,12 @@
 }
 
 .section_third{
-  background-color: #777;
+    background-color: #777;
  padding: 100px;
  text-align: center;
  font-size: 35px;
  color: white;
+}
+.pagination{
+background-color: #777;
 }
