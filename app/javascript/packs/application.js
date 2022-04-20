@@ -12,6 +12,8 @@ import "bootstrap/dist/js/bootstrap"
 import "bootstrap/dist/css/bootstrap"
 import "stylesheets/application"
 
+import "@fortawesome/fontawesome-free/css/all.css";
+
 
 
 
@@ -37,3 +39,9 @@ require("trix")
 require("@rails/actiontext")
 import "../trix-editor-overrides"
 import "@fortawesome/fontawesome-free/css/all"
+import "controllers"
+window.initMapEvent = function(){
+    const evt = new Event("Events")
+    document.dispatchEvent(evt)
+}
+
