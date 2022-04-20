@@ -12,15 +12,12 @@ import "bootstrap/dist/js/bootstrap"
 import "bootstrap/dist/css/bootstrap"
 import "stylesheets/application"
 
+import "@fortawesome/fontawesome-free/css/all.css";
 
 
 
 
-// document.addEventListener("click",function(){
-//   document.getElementById("myBtn").addEventListener("click",function(){
-//     document.getElementById("demo").innerHTML="hello World"
-//   });
-// });
+
 
 
 
@@ -30,3 +27,10 @@ import "stylesheets/application"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import "controllers"
+window.initMapEvent = function(){
+    const evt = new Event("Events")
+    document.dispatchEvent(evt)
+}
+

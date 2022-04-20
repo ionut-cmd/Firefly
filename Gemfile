@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 #added gems
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
+gem 'json', '~> 2.6', '>= 2.6.1'
 
 
 group :development, :test do
