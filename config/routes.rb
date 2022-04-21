@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'ionut', to: 'home#ionut'
+  
 
   resources :comments
   devise_for :users
@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   root 'home#home', as: 'homepage_index'
   get 'aboutus_new', to: 'home#aboutus_new'
   get 'forum' , to:  'forums#index'
+  get 'ionut', to: 'home#ionut'
 # <<<<<<< HEAD
 #   get 'aboutus_new', to: 'home#aboutus_new'
 # =======
