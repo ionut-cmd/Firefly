@@ -15,9 +15,12 @@ Rails.application.routes.draw do
 #   get 'aboutus_new', to: 'home#aboutus_new'
 # =======
   get 'profile', to: 'devise#edit'
+<<<<<<< HEAD
 # >>>>>>> 26bf5b11cdc2a39423c5df7643670d3137dec216
 
   get 'gmap', to: 'home#gmap'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+=======
+>>>>>>> 79cc8c15f13094e6a15a2cc64770daa288911ec1
 end

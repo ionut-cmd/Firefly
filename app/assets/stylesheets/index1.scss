@@ -154,7 +154,7 @@ $color_grey_dark: #a2a2a2;
   }
   p {
     position: relative;
-    color: #f1f1f1;;
+    color: #f1f1f1;
     margin: 1rem 0 0;
     &:first-of-type {
       margin-top: 1.25rem;
@@ -213,6 +213,7 @@ $color_grey_dark: #a2a2a2;
     }
   }
 }
+
 
   .glow-on-hover {
     margin-left: 1500px;
@@ -279,3 +280,4 @@ $color_grey_dark: #a2a2a2;
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+

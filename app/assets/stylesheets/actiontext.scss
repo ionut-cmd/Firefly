@@ -34,3 +34,12 @@
     }
   }
 }
+.trix-editor {
+  &.form-control {
+    min-height: 20rem;
+    max-width: 43rem;
+    width: auto;
+    height: auto;
+  }
+}
+

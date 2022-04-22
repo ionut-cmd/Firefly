@@ -37,6 +37,7 @@ ActiveStorage.start()
 
 require("trix")
 require("@rails/actiontext")
+
 import "../trix-editor-overrides"
 import "@fortawesome/fontawesome-free/css/all"
 import "controllers"
