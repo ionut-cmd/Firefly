@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 
 @import 'ionut';
-=======
- @import "aboutus";
+@import "aboutus";
+@import 'rooms';
 
-
->>>>>>> 5c1db5fbb387b830995dba9882cc745f565728a7
 .section_fir{
   background-color: #555;
  padding: 100px;

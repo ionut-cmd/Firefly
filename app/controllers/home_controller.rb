@@ -3,4 +3,6 @@ class HomeController < ApplicationController
   end
   def aboutus
   end
+  def gmaps
+  end
 end

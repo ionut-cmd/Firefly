@@ -37,6 +37,7 @@ gem 'font-awesome-rails'
 gem 'image_processing', '~> 1.2'
 <<<<<<< HEAD
 gem 'json', '~> 2.6', '>= 2.6.1'
+gem 'redis'
 
 =======
 gem 'will_paginate' 
