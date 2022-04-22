@@ -26,7 +26,7 @@
   <div class="blog-body">
     <div class="blog-title">
       <br>
-      <h1><%= simple_format( @forum.title) %></h1>
+      <h1><%= @forum.title %></h1>
     </div>
     <div class="blog-summary">
       <p><%= @forum.richcontent %></p>
@@ -60,6 +60,10 @@
       <%= render "comments/form" %>
     </h3>
 </div>
+
+
+
+
 
 <%= link_to 'Edit', edit_forum_path(@forum) %> |
 <%= link_to 'Back', forums_path %>

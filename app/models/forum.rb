@@ -3,7 +3,7 @@ class Forum < ApplicationRecord
 	has_many :comments, dependent: :delete_all
 	has_rich_text :richcontent
 
-	self.per_page = 6
+	self.per_page = 1
 	extend FriendlyId
 	friendly_id :title, use: :slugged 
 
