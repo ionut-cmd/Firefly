@@ -66,7 +66,7 @@ class CommentsController < ApplicationController
     end
 
     def post_find
-      @forum = Forum.find(params[:forum_id])
+      @forum = Forum.friendly.find(params[:forum_id])
     end
     # Only allow a list of trusted parameters through.
     def comment_params
