@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2022_04_21_215721) do
-=======
-ActiveRecord::Schema.define(version: 2022_04_21_103900) do
->>>>>>> ionut
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false

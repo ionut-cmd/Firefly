@@ -35,14 +35,10 @@ gem 'devise'
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'image_processing', '~> 1.2'
-<<<<<<< HEAD
 gem 'json', '~> 2.6', '>= 2.6.1'
-gem 'redis'
 
-=======
 gem 'will_paginate' 
 gem 'friendly_id'
->>>>>>> 79cc8c15f13094e6a15a2cc64770daa288911ec1
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
