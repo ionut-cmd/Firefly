@@ -36,6 +36,7 @@ gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'image_processing', '~> 1.2'
 gem 'json', '~> 2.6', '>= 2.6.1'
+gem 'redis'
 
 
 group :development, :test do

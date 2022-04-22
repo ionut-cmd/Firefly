@@ -1,6 +1,6 @@
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-#map-g {
+.map-g {
     height: 400px;
     width: 100%;
 
@@ -21,21 +21,22 @@ body {
     display: flex;
 }
 
-#rightPanel {
+.rightPanel {
     flex-basis: 15rem;
     flex-grow: 1;
     padding: 1rem;
     max-width: 30rem;
     height: 100%;
     box-sizing: border-box;
-    overflow: auto;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
-#rightPanel {
+.rightPanel {
     flex: 0 1 auto;
     padding: 0;
 }
 
-#rightPanel>div {
+.rightPanel>div {
     padding: 0.5rem;
 }
