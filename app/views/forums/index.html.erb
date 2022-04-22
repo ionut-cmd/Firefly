@@ -16,7 +16,11 @@
     <use xlink:href="#s-text" class="text-copy"></use>
   </g>
 </svg>
+<<<<<<< HEAD
 <div class="container">
+=======
+<button class="glow-on-hover" type="button"><%= link_to 'New Forum', new_forum_path %></button>
+>>>>>>> refs/remotes/origin/develop
 <% @forums.each do |forum| %>
   <div class="blog-card">
     <div class="meta">
@@ -54,10 +58,11 @@
       </p>
     </div>
   </div>
- 
+
 
 <br>
 <% end %>
+<<<<<<< HEAD
 <div class="page-card" style="text-center, background: transparent;" >
 <div class="digg_pagination">
   <%= will_paginate @forums, :container => false %>
@@ -69,3 +74,5 @@
 
 <%= link_to 'New Forum', new_forum_path %>
 </div>
+=======
+>>>>>>> refs/remotes/origin/develop
