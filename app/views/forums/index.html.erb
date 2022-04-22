@@ -1,3 +1,4 @@
+
 <p id="notice"><%= notice %></p>
 
 
@@ -15,7 +16,7 @@
     <use xlink:href="#s-text" class="text-copy"></use>
   </g>
 </svg>
-
+<div class="container">
 <% @forums.each do |forum| %>
   <div class="blog-card">
     <div class="meta">
@@ -57,5 +58,14 @@
 
 <br>
 <% end %>
-<%= link_to 'New Forum', new_forum_path %>
+<div class="page-card" style="text-center, background: transparent;" >
+<div class="digg_pagination">
+  <%= will_paginate @forums, :container => false %>
+</div>
+</div>
 
+
+
+
+<%= link_to 'New Forum', new_forum_path %>
+</div>

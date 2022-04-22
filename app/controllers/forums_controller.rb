@@ -4,10 +4,10 @@ class ForumsController < ApplicationController
 
   # GET /forums or /forums.json
   def index
-    @forums = Forum.all
+    @forums = Forum.all.order("created_at DESC").paginate(page: params[:page])
   end
 
-  # GET /forums/1 or /forums/1.json
+  # GET /forums/1 or /forums/1.json 
   def show
   end
 
@@ -62,7 +62,7 @@ class ForumsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_forum
-      @forum = Forum.find(params[:id])
+      @forum = Forum.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
