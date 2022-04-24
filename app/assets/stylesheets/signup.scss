@@ -27,7 +27,7 @@ body, button, input {
   flex: 0 1 700px;
   margin: auto;
   padding: 10px;
-  
+
 }
 
 .screen {
@@ -212,7 +212,7 @@ body, button, input {
 
 }
 
-.app-form-button:after {    
+.app-form-button:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -224,9 +224,9 @@ body, button, input {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-.app-form-button:hover:after { 
-  width: 90%; 
-  left: 0; 
+.app-form-button:hover:after {
+  width: 90%;
+  left: 0;
 }
 .credits {
   display: flex;
