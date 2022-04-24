@@ -386,13 +386,14 @@ nav {
     }
 }
 
-.wrapper {
+.wrapper1 {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 100vh;
     overflow-x: hidden;
+    border: none;
 
     .container {
         margin: 0 auto;
@@ -400,7 +401,7 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
+        position: absolute;
 
         // Scene for the Parallax Effect
         .scene {
@@ -416,12 +417,13 @@ nav {
         .three,
         .circle,
         .p404 {
-            width: 60%;
-            height: 60%;
+            width: 70%;
+            height: 70%;
             top: 20% !important;
             left: 20% !important;
             min-width: 400px;
             min-height: 400px;
+            position: absolute;
 
             .content {
                 width: 600px;
@@ -545,6 +547,7 @@ nav {
                     font-size: 18px;
                     letter-spacing: 0.6px;
                     margin-bottom: 40px;
+                    margin-left: 150px;
                     text-shadow: 6px 6px 10px $bg-03;
                 }
 
@@ -599,7 +602,7 @@ nav {
             }
 
             &:nth-of-type(2) {
-                color: $bg-02;
+                color: yellow;
                 z-index: 1;
                 animation-delay: 1s;
                 filter: blur(10px);
