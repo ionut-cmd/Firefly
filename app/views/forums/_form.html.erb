@@ -16,7 +16,7 @@
       <div class="screen-body">
         <div class="screen-body-item">
           <div class="app-title">
-          <span>Create New Forum</span>
+          <span style="color:yellow">Create New Forum</span>
         </div>
         <br>
           <div class="app-form">
@@ -32,8 +32,8 @@
             <div class="hidden_field">
               <%= form.hidden_field :imageurl, value:"BannerPics/img"+(rand(1-54)).to_s+".jpg" %>
             </div>
-  
             <button class="app-form-button" ><div class="actions"><%= form.submit "Create Forum", class:"app-form-button" %></div></button>
+            
           </div>
         </div>
       </div>
