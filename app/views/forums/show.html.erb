@@ -30,23 +30,28 @@
       <li><a>Comments</a></li>
     </ul>
   </div>
+  <div class="" style="">
     <% @forum.comments.each do |comment| %>
         <ul style="list-style-type:none;">
           <li><img src=<%=asset_path comment.user.thumbnail%> width=40 height =40 > <%=comment.user.email%></li>
-          <li><a><%=comment.comment%></a></li>
-          <li><a><%=time_ago_in_words(comment.created_at)+ " ago"%></a></li>
+          <br>
+          <li style="left:0px">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a><%=comment.comment%></a></li>
+          <br>
+          <li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a><%=time_ago_in_words(comment.created_at)+ " ago"%></a></li>
           <% if comment.user == current_user or @forum.user == current_user %>
-            <li> <%= link_to "Delete Reply", [comment.forum, comment], method: :delete, data: { confirm: "Are you sure?" } %>
+            <li> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= link_to "Delete Reply", [comment.forum, comment], method: :delete, data: { confirm: "Are you sure?" } %>
           <%end%>
           </li>
         </ul>
     <% end %>
 
+  </div>
+
     <h2 style="text-align:center">Reply to thread
       <div class="">
         <%= render "comments/form" %>
       </div>
-       <%= link_to 'Edit', edit_forum_path(@forum) %> | <%= link_to 'Back', forums_path %>
+       <%= link_to 'Edit', edit_forum_path(@forum) %> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <%= link_to 'Back', forums_path %>
     </h2>
 
 
