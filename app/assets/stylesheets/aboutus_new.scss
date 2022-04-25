@@ -1,4 +1,6 @@
-.head{
+
+ .head{
+   resize: none;
   margin-left: auto;
   margin-right: auto;
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Playfair+Display:wght@400;700&display=swap');
@@ -45,13 +47,13 @@ p {
 .page-description {
   padding-block: 2em;
   max-width: 500px;
-  color: black
+  // color: black
 }
 
 .cta {
   text-transform: uppercase;
   background-color: #C4CFDA;
-  color: black;
+  // color: black;
   padding: 1em 3em;
   border: none;
   cursor: pointer;
@@ -150,9 +152,11 @@ p {
    padding: 20px;
   }
   .container1{
+    // grid-column: span 3;
     float:left;
     width: 50%;
   }
+
   @import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
   * {
     margin: -12px;
@@ -364,7 +368,7 @@ body {
 
 body {
   font-family: $bodyFont;
-  background: #333;
+  // background: #333;
 }
 
 .container1 {
@@ -436,7 +440,7 @@ body {
       height: 50px;
       line-height: 50px;
       text-align: center;
-      background: #fff;
+      // background: #fff;
       font-size: 23px;
       color: #333;
       font-weight: bold;
@@ -457,7 +461,7 @@ body {
   background: #000;
   transition: .2s;
   .fab {
-    color: #fff;
+    // color: #fff;
   }
 }
 

@@ -1,4 +1,4 @@
-<%= form_with(model: forum) do |form| %>
+.<%= form_with(model: forum) do |form| %>
   <% if forum.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(forum.errors.count, "error") %> prohibited this forum from being saved:</h2>
@@ -33,7 +33,7 @@
               <%= form.hidden_field :imageurl, value:"BannerPics/img"+(rand(1-54)).to_s+".jpg" %>
             </div>
             <button class="app-form-button" ><div class="actions"><%= form.submit "Create Forum", class:"app-form-button" %></div></button>
-            
+
           </div>
         </div>
       </div>

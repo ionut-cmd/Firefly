@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .first{
+  .text{
+    width: 0px;
+  }
   .about {
    $cubic: cubic-bezier(0.64, 0.01, 0.07, 1.65);
    $transition: 0.6s $cubic;
@@ -391,7 +394,7 @@ nav {
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 50vh;
     overflow-x: hidden;
     border: none;
 
@@ -417,8 +420,8 @@ nav {
         .three,
         .circle,
         .p404 {
-            width: 70%;
-            height: 70%;
+            width: 88%;
+            height: 95%;
             top: 20% !important;
             left: 20% !important;
             min-width: 400px;
