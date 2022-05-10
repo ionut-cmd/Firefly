@@ -26,6 +26,7 @@ export default class extends Controller {
    
     
     // displays the map
+    console.log("displaying map")
     this.gmaps = new google.maps.Map(this.gmapsTarget, {
     center: {lat: 51.508780, lng: -0.127201 },
     zoom: 12, 
@@ -96461,7 +96462,6 @@ var json = [
 
     
 // })
-
 
 
 

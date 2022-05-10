@@ -35,8 +35,11 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+
+require("jquery")
 require("trix")
 require("@rails/actiontext")
+require("channels")
 
 import "../trix-editor-overrides"
 import "@fortawesome/fontawesome-free/css/all"

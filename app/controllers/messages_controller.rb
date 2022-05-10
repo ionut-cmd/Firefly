@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_message, only: %i[ show edit update destroy ]
-
+  count = 0
   # GET /messages or /messages.json
   def index
     @messages = Message.all
@@ -24,18 +25,8 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.user = current_user
     @message.save
-    redirect_to request.referrer
-
-
-    # respond_to do |format|
-    #   if @message.save
-    #     format.html { redirect_to message_url(@message), notice: "Message was successfully created." }
-    #     format.json { render :show, status: :created, location: @message }
-    #   else
-    #     format.html { render :new, status: :unprocessable_entity }
-    #     format.json { render json: @message.errors, status: :unprocessable_entity }
-    #   end
-    # end
+    SendMessageJob.perform_later(@message)
+   
   end
 
   # PATCH/PUT /messages/1 or /messages/1.json
