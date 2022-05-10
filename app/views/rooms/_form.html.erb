@@ -3,11 +3,33 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs form-control">
-    <%= f.input :name %>
-  </div>
 
-  <div class="form-actions ">
-    <%= f.button :submit , class: "btn btn-primary btn-block", value: "New Chat" %>
+  <div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-body">
+        <div class="screen-body-item">
+          <div class="app-title">
+          <span style="color:yellow">Create New Forum</span>
+        </div>
+        <br>
+          <div class="app-form">
+            <div class="app-form-group">
+              <%=f.label :name ,class: "app-subhead" %><br /><%= f.text_field :name,class: "form-control",placeholder: "NAME", autofocus: true %>
+            </div>
+            <div class="app-form-group">
+              <%=f.label :remail ,class: "app-subhead" %><br /><%= f.text_field :remail,class: "form-control",placeholder: "Email", autofocus: true %>
+            </div>
+           
+            <div class="hidden_field">
+              <%= f.hidden_field :semail, value: current_user.email %>
+             </div>
+            <button class="app-form-button" ><div class="actions"><%= f.submit "New Chat", class:"app-form-button" %></div></button>
+          
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 <% end %>

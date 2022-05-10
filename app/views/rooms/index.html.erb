@@ -7,12 +7,11 @@
       <small>Logged in as <%= current_user.firstname%></small></br>
     </div>
     <div class="col-sm-6" style= " width: 25%">
-      <div class="card">
-        <div class="card-body">
-
+  
           <%= render 'form', room: Room.new %>
-          <hr>
+          <h3> CHATS </h3>
           <% @rooms.each do |room| %>
+            <% if current_user.email == room.remail || room.semail == current_user.email %>
             <%= link_to room do%>
               <div class="card mb-2 border-0">
                 <div class="card-body text-decoration-none room">
@@ -21,10 +20,8 @@
                 </div>
               </div>
             <% end %>
+            <% end %>
           <% end %>
-
-        </div>
-      </div>
     </div>
     <div class="col-sm-6" >
       <% if @room.present? %>
