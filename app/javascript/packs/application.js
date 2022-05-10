@@ -11,8 +11,8 @@ import "channels"
 import "bootstrap/dist/js/bootstrap"
 import "bootstrap/dist/css/bootstrap"
 import "stylesheets/application"
+import 'trix/dist/trix.css';
 
-import "@fortawesome/fontawesome-free/css/all.css";
 
 
 
@@ -35,8 +35,11 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+
+require("jquery")
 require("trix")
 require("@rails/actiontext")
+require("channels")
 
 import "../trix-editor-overrides"
 import "@fortawesome/fontawesome-free/css/all"

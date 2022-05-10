@@ -1,14 +1,90 @@
-// .message{
+.message{
+// float: left;
+    .content{
+        background-color: rgb(230, 222, 222);
+        padding: 8px 12px;
+        border-radius: 15px;
+        float: left;
+        
+    }
+    .author{
+        font-size: 0.9rem;
+        color: rgb(128, 128, 123);
+        margin-left: 10px;
+        float: left;
+        
+    }
+
+    &.me {
     
-//     .content{
-//         background-color: rgb(230, 222, 222);
-//         padding: 8px 12px;
-//         border-radius: 15px;
-//     }
-//     .author{
-//         font-size: 0.9rem;
-//         color: rgb(128, 128, 123);
-//         margin-left: 10px;
+        .content{
+            background-color: rgb(127, 165, 214);
+            float: right;
+            
+        }
+        .author{
+            float: right;
+        }
+    }
+
+}
+.my_scroll_card{
+    display: inline-block;
+    overflow-y: scroll;
+    height: 500px;
+}
+
+.room {
+        text-decoration: none;
+        background-color: rgb(246, 246, 246);
+        border-radius: 15px;
+    }
+
+.input_message{
+    position: relative;
+    bottom: 0;
+}
+.mes{
+    display: table;
+    //display: list-item;
+
+}
+// .mes{
+//     display: inline-block;
+//     overflow-y: scroll;
+//     height: 100vh;
+    
+//     .message {
+    
+//         // float: left;
+//         .content {
+//             background-color: rgb(230, 222, 222);
+//             padding: 8px 12px;
+//             border-radius: 15px;
+//             float: left;
+    
+//         }
+    
+//         .author {
+//             font-size: 0.9rem;
+//             color: rgb(128, 128, 123);
+//             margin-left: 10px;
+//             float: left;
+    
+//         }
+    
+//         &.me {
+    
+//             .content {
+//                 background-color: rgb(127, 165, 214);
+//                 float: right;
+//             }
+    
+//             .author {
+//                 float: right;
+//             }
+//         }
+    
 //     }
 
 // }

@@ -26,6 +26,7 @@ export default class extends Controller {
    
     
     // displays the map
+    console.log("displaying map")
     this.gmaps = new google.maps.Map(this.gmapsTarget, {
     center: {lat: 51.508780, lng: -0.127201 },
     zoom: 12, 
@@ -96537,6 +96538,8 @@ placeChanged() {
 
 //calculates route and displays route information as HTML
 calculateAndDisplayRoute() {
+  console.log('i am in display route')
+  console.log(`origin location: ${this.originTarget.value} destination: ${this.destTarget.value}`)
   this.directionsService
     .route({
       origin: {

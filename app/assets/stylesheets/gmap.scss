@@ -1,42 +1,42 @@
 // /* Always set the map height explicitly to define the size of the div
 //        * element that contains the map. */
-// .map-g {
-//     height: 400px;
-//     width: 100%;
+.map-g {
+    height: 400px;
+    width: 100%;
 
-// }
+}
 
-// /* Optional: Makes the sample page fill the window. */
-// html,
-// body {
-//     height: 100%;
-//     margin: 0;
-//     padding: 0;
-// }
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
-// .jumbotron {
-//     background-color: #dcd1d1;
-//     margin: 0%;
-//     padding: 10%;
-//     display: flex;
-// }
+.jumbotron {
+    background-color: #dcd1d1;
+    margin: 0%;
+    padding: 10%;
+    display: flex;
+}
 
-// .rightPanel {
-//     flex-basis: 15rem;
-//     flex-grow: 1;
-//     padding: 1rem;
-//     max-width: 30rem;
-//     height: 100%;
-//     box-sizing: border-box;
-//     overflow: hidden;
-//     overflow-y: scroll;
-// }
+.rightPanel {
+    flex-basis: 15rem;
+    flex-grow: 1;
+    padding: 1rem;
+    max-width: 30rem;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: scroll;
+}
 
-// .rightPanel {
-//     flex: 0 1 auto;
-//     padding: 0;
-// }
+.rightPanel {
+    flex: 0 1 auto;
+    padding: 0;
+}
 
-// .rightPanel>div {
-//     padding: 0.5rem;
-// }
+.rightPanel>div {
+    padding: 0.5rem;
+}

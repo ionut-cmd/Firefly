@@ -1,7 +1,11 @@
-<!--<p id="notice"><%= notice %></p>-->
+<div id = "user-id" data-user-id="<%= current_user.id %>"></div>
+<div id = "room-id" data-room-id="<%= @room.try(:id) %>"></div>
 
 <div class= "container-fluid">
   <div class="row">
+    <div class="card-body">
+      <small>Logged in as <%= current_user.firstname%></small></br>
+    </div>
     <div class="col-sm-6" style= " width: 25%">
       <div class="card">
         <div class="card-body">
@@ -9,10 +13,11 @@
           <%= render 'form', room: Room.new %>
           <hr>
           <% @rooms.each do |room| %>
-            <%= link_to room_path(room) do%>
-              <div class="card mb-2">
-                <div class="card-body">
-                  <%= room.name %>
+            <%= link_to room do%>
+              <div class="card mb-2 border-0">
+                <div class="card-body text-decoration-none room">
+                  <b><%= room.name %></b><br>
+                  <small><%= room.users.uniq.count %> Members</small>
                 </div>
               </div>
             <% end %>
@@ -23,23 +28,22 @@
     </div>
     <div class="col-sm-6" >
       <% if @room.present? %>
-        <div class="card">
-          <p><%= @room.name %></p>
+        <div class="card my_scroll_card">
+          <div class="card-header"><%= @room.name %></div>
+            
             <% @room.messages.each do |message| %>
-              <div class="message <%= 'me' if message.user == current_user %> ">
-                <div class="content">
-                  <%= message.content %> 
-                </div>
-                <div class="author">
-                  <%= message.user.firstname %>
-                </div>
-              </div>
-          <% end %> 
-          <div class="card-body">
               
-              <%= render 'messages/form', message: Message.new, room: @room %> 
+             <br><%= render('shared/message', message: message)%><br>
+              
+          <% end %> 
+          <div id = 'messages' class="mes"></div>
          
-          </div>
+          
+        </div>
+        <div class="card-body input_message">
+              
+              <%= render 'messages/form', message: Message.new, room: @room %>
+      
         </div>
         
       <% end %>
@@ -52,5 +56,6 @@
 <!--
 <div class="">
 </div>
+min 56
 -->
     
