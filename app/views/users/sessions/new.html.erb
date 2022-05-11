@@ -1,0 +1,30 @@
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span style="color:yellow">LOGIN</span>
+          </div>
+        </div>
+        <div class="screen-body-item">
+          <div class="app-form">
+            <div class="app-form-group">
+             <%= f.label :email,class: "app-subhead"  %><br /><%= f.email_field :email,class: "form-control",placeholder: "Email", autofocus: true, autocomplete: "email" %>
+            </div>
+            <div class="app-form-group">
+              <%= f.label :password,class: "app-subhead"  %><br /><%= f.password_field :password,class: "form-control",placeholder: "Password", autofocus: true, autocomplete: "new-password" %>
+            </div>
+            <button  class="app-form-button" ><div class="actions"><%= f.submit "LOGIN", class:"app-form-button" %></div></button>
+            <% end %>
+            <button class="app-form-button"><%= button_to "SIGN-UP", new_user_registration_path, method: :get, class:"app-form-button"%></button>
+            <button class="app-form-button" type="button" name="button">  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br /></button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

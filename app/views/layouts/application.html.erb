@@ -5,15 +5,33 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= javascript_pack_tag 'hello_react' %>
+    
+    <%= javascript_pack_tag 'header1' %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+     <script
+     defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-TJwbVJvJa5FiQb7TtWMGLpmpawrQwjc&callback=initMapEvent&libraries=places&v=weekly"
+      async 
+    ></script>
+  
   </head>
 
   <body>
-    <%= render('shared/navbar') %>
+
+    <!-- <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> -->
+    <%= render('shared/navbar1') %>
     <%= yield %>
+
+    <!-- <button  id="myBtn">click</button>
+    <p id="demo">11</p> -->
+
   </body>
+  <footer>
+     <%= render('shared/footer') %>
+  </footer>
 </html>

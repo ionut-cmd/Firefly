@@ -1,0 +1,58 @@
+<div id = "user-id" data-user-id="<%= current_user.id %>"></div>
+<div id = "room-id" data-room-id="<%= @room.try(:id) %>"></div>
+
+<div class= "container-fluid">
+  <div class="row">
+    <div class="card-body">
+      <small>Logged in as <%= current_user.firstname%></small></br>
+    </div>
+    <div class="col-sm-6" style= " width: 25%">
+  
+          <%= render 'form', room: Room.new %>
+          <h3> CHATS </h3>
+          <% @rooms.each do |room| %>
+            <% if current_user.email == room.remail || room.semail == current_user.email %>
+            <%= link_to room do%>
+              <div class="card mb-2 border-0">
+                <div class="card-body text-decoration-none room">
+                  <b><%= room.name %></b><br>
+                  <small><%= room.users.uniq.count %> Members</small>
+                </div>
+              </div>
+            <% end %>
+            <% end %>
+          <% end %>
+    </div>
+    <div class="col-sm-6" >
+      <% if @room.present? %>
+        <div class="card my_scroll_card">
+          <div class="card-header"><%= @room.name %></div>
+            
+            <% @room.messages.each do |message| %>
+              
+             <br><%= render('shared/message', message: message)%><br>
+              
+          <% end %> 
+          <div id = 'messages' class="mes"></div>
+         
+          
+        </div>
+        <div class="card-body input_message">
+              
+              <%= render 'messages/form', message: Message.new, room: @room %>
+      
+        </div>
+        
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+<div class="">
+</div>
+min 56
+-->
+    

@@ -1,0 +1,66 @@
+.digg_pagination {
+  
+  background: transparent;
+  cursor: default;
+  /* self-clearing method: */ }
+
+  .digg_pagination a, .digg_pagination span, 
+  .digg_pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .digg_pagination .disabled {
+    color: #FFF01F;
+    background:#3e3e3e; 
+     }
+  .digg_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #3e3e3e;
+    color: #FFF01F;
+    border-radius: 30%; }
+  .digg_pagination a {
+    text-decoration: none;
+    background: #3e3e3e;
+    color: #FFF01F;}
+    .digg_pagination a:hover, .digg_pagination a:focus {
+      color: #000033;
+      border-color: #000033;
+       }
+  .digg_pagination .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .digg_pagination .page_info b {
+      color: #000033;
+      background: #6aa6ed;
+      padding: 0.1em 0.25em; }
+  .digg_pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .digg_pagination {
+    height: 1%; }
+  *:first-child + html .digg_pagination {
+    overflow: hidden; }
+.page-card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  margin-left: 13%;
+  margin-right: 13%;
+  padding-left: 5%;
+  padding-right:5%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background:#3e3e3e ;
+  line-height: 1.4;
+  font-family: sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 2;}

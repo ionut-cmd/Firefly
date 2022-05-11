@@ -1,0 +1,41 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span style="color:yellow">PROFILE</span>
+          </div>
+          <div class="app-personal">
+          <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px"<%= image_tag @user.thumbnail%><span class="font-weight-bold" style="color:yellow"><%= @user.firstname + " " + @user.lastname%></span><span class="font-weight-bold" style="color:yellow"><%= @user.email%></span><span> </span></div>
+        </div>
+    </div>
+        <div class="screen-body-item">
+          <div class="app-form">
+            <div class="app-form-group">
+              <%=f.label "First Name" ,class: "app-subhead" %><br /><%= f.text_field :firstname,class: "form-control",placeholder: "First Name", autofocus: true, autocomplete: "firstname" %>
+            </div>
+            <div class="app-form-group">
+              <%=f.label "Last Name" ,class: "app-subhead" %><br /><%= f.text_field :lastname,class: "form-control",placeholder: "Last Name", autofocus: true, autocomplete: "lastname" %>
+            </div>
+            <div class="app-form-group">
+             <%= f.label :email,class: "app-subhead"  %><br /><%= f.email_field :email,class: "form-control",placeholder: "Email", autofocus: true, autocomplete: "email" %>
+            </div>
+            <div class="app-form-group">
+              <%= f.label "New Password",class: "app-subhead"  %><br /><%= f.password_field :password,class: "form-control",placeholder: "Password", autofocus: true, autocomplete: "new-password" %>
+            </div>
+            <div class="app-form-group">
+              <%= f.label :password_confirmation,class: "app-subhead"  %><br /><%= f.password_field :password_confirmation,class: "form-control",placeholder: "Password Confirmation", autofocus: true, autocomplete: "new-password" %>
+            </div>
+            <div class="app-form-group">
+              <%= f.label :current_password,class: "app-subhead"  %><br /><%= f.password_field :current_password,class: "form-control",placeholder: "Current Password", autofocus: true, autocomplete: "current-password" %>
+            </div>
+              <center><button class="app-form-button" ><div class="actions"><%= f.submit "SAVE PROFILE", class:"app-form-button" %></div></button></center>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

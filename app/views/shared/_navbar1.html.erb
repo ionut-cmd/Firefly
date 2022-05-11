@@ -1,0 +1,52 @@
+<nav class = "navbar navbar-expand-lg navbar navbar-dark bg-dark">
+<nav>
+    <div class="logo">
+        <%=image_tag("newnewlogo.png")%>
+    </div>
+    <div class="hamburger1">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <ul1 class="nav-links">
+        <li1><a href="/">Home</a></li1>
+        <li1><a href="/gmap">Map</a></li1>
+        <li1><a href="/forums">Forum</a></li1>
+        <li1><a href="/rooms">Chat</a></li1>
+        <li1><a href="/aboutus_new">About Us</a></li1>
+        <li1><a href="#">Contact Us</a></li1>
+        <% if user_signed_in? %>
+            <button class="join-button" type="submit" >
+            <li2><%= link_to "Profile", edit_user_registration_path %></li2>
+            </button>
+            <button class="join-button" type="submit" >
+            <li2><%= link_to "Sign-Out", destroy_user_session_path, method: "delete" %></li2>
+            </button>
+        <% else %>
+            <button class="join-button" type="submit" >
+            <li2><%= link_to "Login", new_user_session_path  %></li2>
+            </button>
+            <button class="join-button" type="submit" >
+            <li2><%= link_to "Sign-Up", new_user_registration_path %></li2>
+            </button>
+        <% end %>
+
+    </ul1>
+</nav>
+</nav>
+<script>
+    var hamburger1 = document.querySelector(".hamburger1");
+    var navLinks = document.querySelector(".nav-links");
+    var links = document.querySelectorAll(".nav-links li");
+
+    hamburger1.addEventListener('click', ()=>{
+       //Animate Links
+        navLinks.classList.toggle("open");
+        links.forEach(link => {
+            link.classList.toggle("fade");
+        });
+
+        //Hamburger Animation
+        hamburger1.classList.toggle("toggle");
+    });
+</script>

@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+    <div class="blog-container">
+
+  <div class="blog-header">
+    <div class="blog-cover" style="background-image: url(<%=asset_path @forum.imageurl %>)">
+      <div class="blog-author">
+        <h3><img src=<%=asset_path @forum.user.thumbnail%> width=60 height =60 border-radius = 50 %> <%=@forum.user.email%></h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-body">
+    <div class="blog-title">
+      <br>
+      <h1><%= @forum.title %></h1>
+    </div>
+    <div class="blog-summary">
+      <p><%= @forum.richcontent %></p>
+    </div>
+    <div class="blog-tags">
+      <ul>
+        <li><a><%= time_ago_in_words(@forum.created_at)+ " ago" %></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="blog-footer">
+
+    <ul>
+      <li><a>Comments</a></li>
+    </ul>
+  </div>
+  <div class="" style="">
+    <% @forum.comments.each do |comment| %>
+        <ul style="list-style-type:none;">
+          <li><img src=<%=asset_path comment.user.thumbnail%> width=40 height =40 > <%=comment.user.email%></li>
+          <br>
+          <li style="left:0px">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a><%=comment.comment%></a></li>
+          <br>
+          <li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a><%=time_ago_in_words(comment.created_at)+ " ago"%></a></li>
+          <% if comment.user == current_user or @forum.user == current_user %>
+            <li> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= link_to "Delete Reply", [comment.forum, comment], method: :delete, data: { confirm: "Are you sure?" } %>
+          <%end%>
+          </li>
+        </ul>
+    <% end %>
+
+  </div>
+
+    <h2 style="text-align:center">Reply to thread
+      <div class="">
+        <%= render "comments/form" %>
+      </div>
+       <%= link_to 'Edit', edit_forum_path(@forum) %> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <%= link_to 'Back', forums_path %>
+    </h2>
+
+
+</div>

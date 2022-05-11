@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: one
+  remail: one@mail.com  
+  semail: two@mail.com
+
+two:
+  name: two
+  remail: two@mail.com  
+  semail: one@mail.com

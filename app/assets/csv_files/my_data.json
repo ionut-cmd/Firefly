@@ -1,0 +1,135 @@
+[
+ 
+ {
+   "Crime ID": "828b6ad43ac3fac08f861f400b941bda4376fb1a880899578557ed77813fe298",
+   "Month": "2022-02",
+   "Reported by": "Avon and Somerset Constabulary",
+   "Falls within": "Avon and Somerset Constabulary",
+   "Longitude": -3.097026,
+   "Latitude": 51.014955,
+   "Location": "On or near EAST STREET",
+   "LSOA code": "E01029284",
+   "LSOA name": "Taunton Deane 010B",
+   "Outcome type": "Unable to prosecute suspect"
+ },
+ {
+   "Crime ID": "65258c201c0493cb82c53fdcb421b840c0a6df822a0f6b4a8273031761546e90",
+   "Month": "2022-02",
+   "Reported by": "Avon and Somerset Constabulary",
+   "Falls within": "Avon and Somerset Constabulary",
+   "Longitude": -3.093181,
+   "Latitude": 51.01572,
+   "Location": "On or near Petrol Station",
+   "LSOA code": "E01029285",
+   "LSOA name": "Taunton Deane 007A",
+   "Outcome type": "Unable to prosecute suspect"
+ },
+ {
+   "Crime ID": "9ed7e7abee4b3e29048518e1a205407e1ef4e9ce7716f382a4e66b0fcd232e5e",
+   "Month": "2022-02",
+   "Reported by": "Avon and Somerset Constabulary",
+   "Falls within": "Avon and Somerset Constabulary",
+   "Longitude": -2.506412,
+   "Latitude": 51.461943,
+   "Location": "On or near BANK ROAD",
+   "LSOA code": "E01015007",
+   "LSOA name": "South Gloucestershire 028D",
+   "Outcome type": "Suspect charged"
+ },
+ {
+   "Crime ID": "959f10ed175d8011ce387f054d9c9b2dbb62d13621e8f00f34dbe1764a7420fd",
+   "Month": "2022-02",
+   "Reported by": "Avon and Somerset Constabulary",
+   "Falls within": "Avon and Somerset Constabulary",
+   "Longitude": -2.768615,
+   "Latitude": 51.282452,
+   "Location": "On or near CUFIC LANE",
+   "LSOA code": "E01029126",
+   "LSOA name": "Sedgemoor 001B",
+   "Outcome type": "Unable to prosecute suspect"
+ },
+ {
+   "Crime ID": "a4336fd447041153e6f6ad510af0df750ed64d7cf90c8cd216e22a4f35595ab2",
+   "Month": "2022-02",
+   "Reported by": "Avon and Somerset Constabulary",
+   "Falls within": "Avon and Somerset Constabulary",
+   "Longitude": -2.623711,
+   "Latitude": 51.417597,
+   "Location": "On or near WATCHILL AVENUE",
+   "LSOA code": "E01014521",
+   "LSOA name": "Bristol 046D",
+   "Outcome type": "Offender given a caution"
+ },
+ {
+   "Crime ID": "b8b35839009929c296cd07420877fedaf30178dd952214286d86387e862de494",
+   "Month": "2022-02",
+   "Reported by": "Avon and Somerset Constabulary",
+   "Falls within": "Avon and Somerset Constabulary",
+   "Longitude": -3.09757,
+   "Latitude": 51.030139,
+   "Location": "On or near LYNGFORD SQUARE",
+   "LSOA code": "E01029297",
+   "LSOA name": "Taunton Deane 004A",
+   "Outcome type": "Offender given a caution"
+ },
+ {
+   "Crime ID": "15e8a28175e778235619ffd0ebc4e53cf2673028aa423fede2da16eb94d8a7e1",
+   "Month": "2022-02",
+   "Reported by": "Avon and Somerset Constabulary",
+   "Falls within": "Avon and Somerset Constabulary",
+   "Longitude": -2.596859,
+   "Latitude": 51.441619,
+   "Location": "On or near MILL LANE",
+   "LSOA code": "E01033359",
+   "LSOA name": "Bristol 039E",
+   "Outcome type": "Unable to prosecute suspect"
+ },
+ {
+   "Crime ID": "a8cabe5c9a103bf29eb6869eaa111bc885e372a85389206b5c689da48c2fce54",
+   "Month": "2022-02",
+   "Reported by": "Avon and Somerset Constabulary",
+   "Falls within": "Avon and Somerset Constabulary",
+   "Longitude": null,
+   "Latitude": null,
+   "Location": "No location",
+   "LSOA code": "",
+   "LSOA name": "",
+   "Outcome type": "Offender given a caution"
+ },
+ {
+   "Crime ID": "7628bf7529d156ab6bb95923b1ca607564de335f868e86003c19062d18af818e",
+   "Month": "2022-02",
+   "Reported by": "Avon and Somerset Constabulary",
+   "Falls within": "Avon and Somerset Constabulary",
+   "Longitude": -2.558471,
+   "Latitude": 51.4368,
+   "Location": "On or near HAMPSTEAD ROAD",
+   "LSOA code": "E01014533",
+   "LSOA name": "Bristol 043A",
+   "Outcome type": "Unable to prosecute suspect"
+ },
+ {
+   "Crime ID": "6a7083f4fafffde0fc97af8c447f5727885826c2be4ccdaf9c391bc84fff331f",
+   "Month": "2022-02",
+   "Reported by": "Avon and Somerset Constabulary",
+   "Falls within": "Avon and Somerset Constabulary",
+   "Longitude": -2.494428,
+   "Latitude": 51.458605,
+   "Location": "On or near WOODSTOCK ROAD",
+   "LSOA code": "E01015002",
+   "LSOA name": "South Gloucestershire 029D",
+   "Outcome type": "Suspect charged"
+ },
+ {
+   "Crime ID": "d28a22adf267c59ac9570845c8e97831960f28da9ea2ccb64c888b381df3da6c",
+   "Month": "2022-02",
+   "Reported by": "Avon and Somerset Constabulary",
+   "Falls within": "Avon and Somerset Constabulary",
+   "Longitude": -2.494428,
+   "Latitude": 51.458605,
+   "Location": "On or near WOODSTOCK ROAD",
+   "LSOA code": "E01015002",
+   "LSOA name": "South Gloucestershire 029D",
+   "Outcome type": "Suspect charged"
+ }
+]

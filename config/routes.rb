@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
-  root 'home#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  
+
+  resources :messages
+  resources :rooms
+  resources :comments
+  devise_for :users
+  resources :forums do
+    resources :comments
+  end
+  root 'home#home', as: 'homepage_index'
+  get 'aboutus_new', to: 'home#aboutus_new'
+  get 'forum' , to:  'forums#index'
+  get 'rooms', to: 'rooms#index'
+
+  get 'profile', to: 'devise#edit'
+
+  get 'gmap', to: 'home#gmap'
+
+
 end
