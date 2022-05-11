@@ -29,6 +29,7 @@ gem 'jquery-rails'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 #added gems
+gem 'dotenv', '~> 2.7', '>= 2.7.6'
 gem 'activejob-uniqueness'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
