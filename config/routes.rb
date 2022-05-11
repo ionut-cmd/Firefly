@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :messages
   resources :rooms
   resources :comments
+  resources :contacts, only: [:new, :create]
   devise_for :users
   resources :forums do
     resources :comments
