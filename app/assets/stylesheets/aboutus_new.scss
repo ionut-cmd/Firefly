@@ -30,14 +30,14 @@ p {
 }
 
 .tag-line {
-  color: #e7b9a5;
+  color: #FA854B;
   text-transform: uppercase;
 }
 
 .title {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
-  color: #e7b9a5;
+  color: #5A5A5A;
   width: 650px;
   text-transform: uppercase;
   line-height: 1.2;
@@ -47,7 +47,8 @@ p {
 .page-description {
   padding-block: 2em;
   max-width: 500px;
-  // color: black
+  font-family: 'Playfair Display', serif;
+  color: #61574F;
 }
 
 .cta {
@@ -146,6 +147,11 @@ p {
 .film{
   .card-text{
     color: yellow;
+    text-align: center;
+  }
+  .card-text1{
+    color: yellow;
+
   }
   .team{
     // border: 3px solid ;
@@ -551,5 +557,8 @@ body {
 
 body {
   font-family: "Poppins", sans-serif !important;
+}
+.text-color{
+  color:black;
 }
 }

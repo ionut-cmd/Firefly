@@ -20,7 +20,7 @@ body, button, input {
 
 .background {
   display: flex;
-  min-height: 100vh;
+  min-height: 40vh;
 }
 
 .container {
@@ -261,6 +261,7 @@ body, button, input {
 
   .screen-body-item.left {
     margin-bottom: 30px;
+    background-color:  #997d7dbf;
   }
 
   .app-title {

@@ -1,4 +1,13 @@
-.<%= form_with(model: forum) do |form| %>
+.<style media="screen">
+  a{
+    text-decoration:none;
+    color:#5AD67D;
+  }
+
+
+</style>
+
+<%= form_with(model: forum) do |form| %>
   <% if forum.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(forum.errors.count, "error") %> prohibited this forum from being saved:</h2>
@@ -17,7 +26,7 @@
         <div class="screen-body-item">
           <div class="app-title">
           <span style="color:yellow">Create New Forum</span>
-        </div>
+        </div 
         <br>
           <div class="app-form">
             <div class="app-form-group">
@@ -33,7 +42,10 @@
               <%= form.hidden_field :imageurl, value:"BannerPics/img"+(rand(1-54)).to_s+".jpg" %>
             </div>
             <button class="app-form-button" ><div class="actions"><%= form.submit "Create Forum", class:"app-form-button" %></div></button>
-          
+            <button class="app-form-button" type="button" ><div class="actions">
+            <%= link_to 'Back', forums_path %>  </div></button>
+
+
           </div>
         </div>
       </div>

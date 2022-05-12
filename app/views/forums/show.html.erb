@@ -1,3 +1,11 @@
+<style media="screen">
+ .comment_scoll{
+   width:800px;
+   height:600px;
+
+   overflow:scroll;
+ }
+</style>
 <p id="notice"><%= notice %></p>
     <div class="blog-container">
 
@@ -30,7 +38,7 @@
       <li><a>Comments</a></li>
     </ul>
   </div>
-  <div class="" style="">
+  <div class="comment_scoll" style="">
     <% @forum.comments.each do |comment| %>
         <ul style="list-style-type:none;">
           <li><img src=<%=asset_path comment.user.thumbnail%> width=40 height =40 > <%=comment.user.email%></li>
@@ -47,11 +55,11 @@
 
   </div>
 
-    <h2 style="text-align:center">Reply to thread
+    <h2 style="text-align:center">
       <div class="">
         <%= render "comments/form" %>
       </div>
-       <%= link_to 'Edit', edit_forum_path(@forum) %> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <%= link_to 'Back', forums_path %>
+      
     </h2>
 
 

@@ -1,4 +1,16 @@
 
+<style media="screen">
+  a{
+    text-decoration:none;
+    color:#5AD67D;
+
+  }
+  .New{
+    position:relative;
+    left:850px;
+  }
+
+</style>
 <p id="notice"><%= notice %></p>
 
 
@@ -19,9 +31,10 @@
 
 <div class="container">
 
-<button class="glow-on-hover" type="button"><%= link_to 'New Forum', new_forum_path %></button>
 
+<div class="New" ><button type="button" class="btn btn-secondary"><%= link_to 'New Forum', new_forum_path %></button></div>
 <% @forums.each do |forum| %>
+
   <div class="blog-card">
     <div class="meta">
 
@@ -49,10 +62,13 @@
       <p><%= truncate(strip_tags(forum.richcontent.to_s), length: 80)%></p>
       <br>
       <p class="read-more">
-        <%= link_to "Read More", forum %>
+        <a href="#"><%= link_to "Read More", forum %></a>
         <br>
         <% if forum.user == current_user %>
+        <br>
           <a><%= link_to 'Delete Post', forum, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+          <br>
+
         <% end %>
 
       </p>
@@ -67,10 +83,11 @@
 <div class="digg_pagination">
   <%= will_paginate @forums, :container => false %>
 </div>
+
 </div>
 
 
 
 
-       
+
 </div>
