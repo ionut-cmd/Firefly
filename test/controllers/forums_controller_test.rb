@@ -14,7 +14,6 @@ class ForumsControllerTest < ActionDispatch::IntegrationTest
     assert sign_in @users
     @forum = @users.forums.build
     @forum.title = 'hello'
-    @forum.content = 'abcd'
     @forum.category = 'hate crime'
     @forum.imageurl = '/img10.jpg'
     

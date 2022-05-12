@@ -2,12 +2,10 @@
 
 one:
   title: MyString
-  content: MyText
   imageurl: MyString
   category: MyString
 
 two:
   title: MyString
-  content: MyText
   imageurl: MyString
   category: MyString
