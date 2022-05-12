@@ -1,10 +1,4 @@
-<style media="screen">
-  .btn-block{
-    transform:translateX(270%);
 
-  }
-
-</style>
 <%= simple_form_for(Room.new) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
