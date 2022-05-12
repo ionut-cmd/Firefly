@@ -7,5 +7,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: redis://redistogo:8513faff8ec45f0a70e481e497cc1b34@crestfish.redistogo.com:10423/
   channel_prefix: Firefly_production
