@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'aboutus_new', to: 'home#aboutus_new'
   get 'forum' , to:  'forums#index'
   get 'rooms', to: 'rooms#index'
+  get 'contact us', to: 'contacts#new'
 
   get 'profile', to: 'devise#edit'
 
