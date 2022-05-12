@@ -1,13 +1,32 @@
+<style media="screen">
 
-<%= simple_form_for([@forum, @forum.comments.build]) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+</style>
 
-  <div class="form-inputs", style="background: transparent">
-    <%= f.input :comment %>
+
+<%= form_for([@forum, @forum.comments.build]) do |f| %>
+
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <!-- <div class="app-title">
+            <span style="color:yellow"></span>
+          </div> -->
+        </div>
+        <div class="screen-body-item">
+          <div class="app-form">
+            <div class="app-form-group">
+             <%= f.label :comment,class: "app-subhead"  %><br /><%= f.text_field :comment,class: "form-control",placeholder: "Comment", autofocus: true, autocomplete: "comment" %>
+            </div>
+            <button  class="app-form-button" ><div class="actions"><%= f.submit "Submit", class:"app-form-button" %></div></button>
+            <button  class="app-form-button" ><div class="actions"><%= link_to 'Edit', edit_forum_path(@forum) %></div></button>
+            <button  class="app-form-button" ><div class="actions"><%= link_to 'Back', forums_path %></div></button>
+
+            <% end %>
+        </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <button type="button" class="btn btn-danger"><%= f.button :submit %></button>
-  </div>
-<% end %>
+</div>

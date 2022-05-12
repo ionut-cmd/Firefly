@@ -4,19 +4,23 @@
 $comment-img-size: 3rem;
 $comment-img-size-sm: 1.75rem;
 
-.comment {
-
-   &-img {
-      width: $comment-img-size;
-      height: $comment-img-size;
-   }
-
-   &-replies &-img {
-      width: $comment-img-size-sm;
-      height: $comment-img-size-sm;
-   }
-
-}
+// .comment {
+//
+//    &-img {
+//       width: $comment-img-size;
+//       height: $comment-img-size;
+//    }
+//
+//    &-replies &-img {
+//       width: $comment-img-size-sm;
+//       height: $comment-img-size-sm;
+//    }
+//
+// }
 .container{
   font-size: .875rem;
+}
+a{
+  color: green;
+  text-decoration: none;
 }

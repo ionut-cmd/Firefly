@@ -1,32 +1,53 @@
+<style media="screen">
+
+</style>
 <title>Google maps API</title>
 <h1>Google Maps</h1>
-<div class="jumbotron1" data-controller="googlemap">
-      <div class="container">
-            <form class="form-horizontal">
-                  <div class = "form-group">
-                        <label for = "from" class = "col-xs-2 control-label"></label>
-                        <div class = "col-xs-4 ">
-                              <input type= "text" id= "from" placeholder= "Origin" data-googlemap-target = "origin">&nbsp&nbsp<i class="fa-solid fa-circle-dot"></i></input>
-                        </div>
-                  </div>
-                   <div class = "form-group">
-                        <label for = "to" class = "col-xs-2 control-label"></label>
-                        <div class = "col-xs-4 ">
-                              <input type= "text" id= "to" placeholder= "Destination" data-googlemap-target = "dest">&nbsp&nbsp<i class="fa-solid fa-location-dot"></i></input>
-                        </div>
-                  </div>
-            </form>
-            <div class= "continer-fluid">
-
-                  <div class='map-g' data-googlemap-target="gmaps" data-action="Events@document->googlemap#initMap" ></div>
 
 
-            </div>
-            <div class = "output" data-googlemap-target = "output">
-            </div>
-            <div class = "rightPanel" data-googlemap-target = "rightPanel">
-            </div>
+<section class ="map_s">
+  <div class="jumbotron1" data-controller="googlemap">
+    <div class="split left1">
+      <div class="centered">
+        <div class= "continer-fluid">
+
+              <div class='map-g' data-googlemap-target="gmaps" data-action="Events@document->googlemap#initMap" ></div>
+
+
+        </div>
+        <form class="form-horizontal">
+              <div class = "form-group">
+                    <label for = "from" class = "col-xs-2 control-label"></label>
+                    <div class = "col-xs-4 ">
+                          <input type= "text" id= "from" placeholder= "Origin" data-googlemap-target = "origin">&nbsp&nbsp<i class="fa-solid fa-circle-dot"></i></input>
+                    </div>
+              </div>
+               <div class = "form-group">
+                    <label for = "to" class = "col-xs-2 control-label"></label>
+                    <div class = "col-xs-4 ">
+                          <input type= "text" id= "to" placeholder= "Destination" data-googlemap-target = "dest">&nbsp&nbsp<i class="fa-solid fa-location-dot"></i></input>
+                    </div>
+              </div>
+        </form>
       </div>
+
+    </div>
+
+  <div class="split1 right">
+  <div class="centered">
+
+
+    <div class="gmap_o">
+      <div class = "output" data-googlemap-target = "output">
+      </div>
+      <div class = "rightPanel" data-googlemap-target = "rightPanel">
+      </div>
+
+    </div>
+
+  </div>
+
+
+ </div>
 </div>
-
-
+</section>
