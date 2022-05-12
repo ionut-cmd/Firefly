@@ -4,7 +4,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.web_socket_server_url = “wss://firefly3g.herokuapp.com/api/v1/cable”
 
-  config.action_cable.allowed_request_origins = [‘https://fireflyg3.herokuapp.com/', ‘https://fireflyg3.herokuapp.com/']
+  config.action_cable.allowed_request_origins = ["https://fireflyg3.herokuapp.com/", "https://fireflyg3.herokuapp.com/"]
   
   # Code is not reloaded between requests.
   config.cache_classes = true
