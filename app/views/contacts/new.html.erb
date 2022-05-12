@@ -1,0 +1,31 @@
+<%= form_for @contact do |f| %>
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span style="color:yellow">CONTACT US</span>
+          </div>
+        </div>
+        <div class="screen-body-item">
+          <div class="app-form">
+            <div class="app-form-group">
+              <%=f.label :name ,class: "app-subhead" %><br /><%= f.text_field :name,class: "form-control",placeholder: "Name", autofocus: true, autocomplete: "name" %>
+            </div>
+            <div class="app-form-group">
+             <%= f.label :email,class: "app-subhead"  %><br /><%= f.email_field :email,class: "form-control",placeholder: "Email", autofocus: true, autocomplete: "email" %>
+            </div>
+            <div class="app-form-group">
+              <%=f.label :message ,class: "app-subhead" %><br /><%= f.text_area :message,class: "form-control",placeholder: "message", autofocus: true, autocomplete: "message" %>
+            </div>
+              <button class="app-form-button" ><div class="actions"><%= f.submit "Send Message", class:"app-form-button" %></div></button>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
