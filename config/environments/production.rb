@@ -2,10 +2,10 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.web_socket_server_url = “wss://fireflyg3.herokuapp.com/api/v1/cable”
+  config.web_socket_server_url = "wss://fireflyg3.herokuapp.com/api/v1/cable"
 
-  #config.action_cable.allowed_request_origins = ['https://fireflyg3.herokuapp.com.app', 'https://fireflyg3.herokuapp.com.app']
-  config.action_cable.disable_request_forgery_protection = true
+  config.action_cable.allowed_request_origins = ['https://fireflyg3.herokuapp.com.app', 'https://fireflyg3.herokuapp.com.app']
+  #config.action_cable.disable_request_forgery_protection = true
 
   # Code is not reloaded between requests.
   config.cache_classes = true
