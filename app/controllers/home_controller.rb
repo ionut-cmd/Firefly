@@ -5,4 +5,6 @@ class HomeController < ApplicationController
   end
   def gmaps
   end
+  def privacy
+  end
 end

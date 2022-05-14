@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'profile', to: 'devise#edit'
 
   get 'gmap', to: 'home#gmap'
+  get 'privacy', to: 'home#privacy'
 
 
 end
